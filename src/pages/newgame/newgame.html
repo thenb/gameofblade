@@ -7,5 +7,50 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>  
+<ion-content>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-12>Difficult</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-4>
+              <button ion-button full>Easy</button>
+          </ion-col>
+          <ion-col col-4>
+              <button ion-button full>Moderate</button>
+          </ion-col>
+          <ion-col col-4>
+              <button ion-button full>Hard</button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>Players</ion-col>
+        </ion-row>
+        <ion-row>           
+          <ion-item>
+            <ion-label><ion-icon ios="logo-apple" md="logo-android"></ion-icon></ion-label>
+            <ion-input type="text" placeholder="Player 1 name"></ion-input>
+          </ion-item>           
+        </ion-row>
+        <ion-row>           
+          <ion-item>
+            <ion-label><ion-icon ios="logo-apple" md="logo-android"></ion-icon></ion-label>
+            <ion-input type="text" placeholder="Player 2 name"></ion-input>
+          </ion-item>           
+        </ion-row>
+        <ion-row>           
+          <ion-item>
+            <ion-label><ion-icon ios="logo-apple" md="logo-android"></ion-icon></ion-label>
+            <ion-input type="text" placeholder="Player 3 name"></ion-input>
+          </ion-item>          
+        </ion-row>
+        <ion-row>          
+          <ion-item>
+            <ion-label><ion-icon ios="logo-apple" md="logo-android"></ion-icon></ion-label>
+            <ion-input type="text" placeholder="Player 4 name"></ion-input>
+          </ion-item>         
+        </ion-row>
+    </ion-grid>  
+    <button ion-button secondary full (click)="startTrick()">Generate Trick</button>   
+    <button ion-button secondary full (click)="cancelGame()">Cancel Game</button>   
 </ion-content>

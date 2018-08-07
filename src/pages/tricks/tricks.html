@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar hideBackButton >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Game Of Blade</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
+          </ion-col>
+          <ion-col col-3>
+            <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
+          </ion-col>
+          <ion-col col-3>
+            <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
+          </ion-col>
+          <ion-col col-3>
+            <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
+          </ion-col>
+        </ion-row>        
+        <ion-row>
+          <button ion-button secondary full>Tap For a Trick</button>   
+        </ion-row>
+        <ion-row> 
+          <ion-label center>True Spin Top Soul</ion-label>
+        </ion-row>        
+    </ion-grid>  
+    <button ion-button secondary full (click)="startGame()">Start Game</button>   
+    <button ion-button secondary full (click)="cancelGame()">Back</button>   
+</ion-content>
