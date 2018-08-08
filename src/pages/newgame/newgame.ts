@@ -19,16 +19,15 @@ export class NewGamePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {    
     this.level = 'easy';
-    this.player_1 = '';
-    this.player_2 = '';
+    this.player_1 = 'Francisco';
+    this.player_2 = 'Pedro';
     this.player_3 = '';
     this.player_4 = '';
   }
 
   startTrick() {   
 
-    if(this.validateGame()){
-
+    if(this.validateGame()){ 
       this.player_status = []
       if(this.player_1 != ''){
         this.player_status.push({name:this.player_1, status:''})
@@ -46,8 +45,7 @@ export class NewGamePage {
         this.player_status.push({name:this.player_4, status:''})
       }
 
-
-
+      window.localStorage.setItem('turn_number', '1');
       //put the tricks page on the stack and go to page
       //Call TricksPage with game conf as parameter
       this.navCtrl.push(TricksPage, {level: this.level, player_status : this.player_status});

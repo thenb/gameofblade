@@ -23,6 +23,6 @@
           <ion-label center>{{trick}}</ion-label>
         </ion-row>        
     </ion-grid>  
-    <button ion-button secondary full (click)="startGame()">Start Turn</button>   
-    <button ion-button secondary full (click)="cancelGame()">Back</button>   
+    <button ion-button secondary full *ngIf="turn==0" (click)="startGame()">Start Turn</button>   
+    <button ion-button secondary full *ngIf="turn!=0" (click)="startGame()">Start Turn {{turn}}</button> 
 </ion-content>

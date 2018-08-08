@@ -10,14 +10,28 @@ import { NewGamePage } from '../newgame/newgame';
 export class HomePage {
   @ViewChild(Nav) nav: Nav;
 
-  constructor(public navCtrl: NavController) {
+  private hasResume : any;
 
+  constructor(public navCtrl: NavController) {
+    //if theres something on turn number
+    let turn_number = window.localStorage.getItem('turn_number');
+    if(!turn_number){ 
+      let turn_number = '0';
+      window.localStorage.setItem('turn_number', turn_number);
+    } 
+    if(+turn_number!=0){ 
+      this.hasResume=true;     
+    } 
   }
 
   startGame() {
     // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
+    // we wouldn't want the back button to show in this scenario   
     this.navCtrl.push(NewGamePage);
+  }
+
+  resumeGame() {
+    alert("Not Implemeted");
   }
 
 }

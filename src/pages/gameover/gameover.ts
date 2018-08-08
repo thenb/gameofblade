@@ -7,7 +7,12 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class GameoverPage {  
 
+  private msg_victory: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {    
+    window.localStorage.setItem('turn_number', '0');
+    this.msg_victory = window.localStorage.getItem('msg_victory');
+
   }
 
   newGame() {

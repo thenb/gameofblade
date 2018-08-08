@@ -24,6 +24,14 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      
+      //if theres something on turn number
+      
+      let turn_number = window.localStorage.getItem('turn_number');
+       if(!turn_number){ 
+        let turn_number = '1';
+        window.localStorage.setItem('turn_number', turn_number);
+      } 
     });
   }
   

@@ -9,5 +9,5 @@
 
 <ion-content padding>  
   <button ion-button secondary full (click)="startGame()">New Game</button>
-  <button ion-button secondary full >Resume Game</button>
+  <button ion-button secondary full *ngIf="hasResume" (click)="resumeGame()" >Resume Game</button>
 </ion-content>
