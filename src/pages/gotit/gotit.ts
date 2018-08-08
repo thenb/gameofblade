@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { TurnsPage } from '../turns/turns';
+import { NewGamePage } from '../newgame/newgame';
 
 @Component({
   selector: 'page-gotit',
@@ -14,7 +14,7 @@ export class GotitPage {
   nextTurn() {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.navCtrl.push(TurnsPage);
+    this.navCtrl.push(NewGamePage);
   } 
  
 }

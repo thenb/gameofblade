@@ -15,6 +15,7 @@ export class NewGamePage {
   private player_2: string;
   private player_3: string;
   private player_4: string;
+  private player_status: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {    
     this.level = 'easy';
@@ -27,17 +28,29 @@ export class NewGamePage {
   startTrick() {   
 
     if(this.validateGame()){
-      //put the tricks page on the stack and go to page
-      var game_conf = {
-        level: this.level,
-        player_1: this.player_1,
-        player_2: this.player_2,
-        player_3: this.player_3,
-        player_4: this.player_4
+
+      this.player_status = []
+      if(this.player_1 != ''){
+        this.player_status.push({name:this.player_1, status:''})
+      }
+      
+      if(this.player_2 != ''){
+        this.player_status.push({name:this.player_2, status:''})
       }
 
+      if(this.player_3 != ''){
+        this.player_status.push({name:this.player_3, status:''})
+      }
+
+      if(this.player_4 != ''){
+        this.player_status.push({name:this.player_4, status:''})
+      }
+
+
+
+      //put the tricks page on the stack and go to page
       //Call TricksPage with game conf as parameter
-      this.navCtrl.push(TricksPage, {game_conf: game_conf});
+      this.navCtrl.push(TricksPage, {level: this.level, player_status : this.player_status});
     }else{
       this.presentToast(CONTENT.NewGame.erroCampoObrigatorio);
     }

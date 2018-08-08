@@ -9,27 +9,16 @@
 
 <ion-content>
     <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let p of player_status" col-3>
+          <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
+          <ion-label>{{p.name}}</ion-label>
+          <ion-label>{{p.status}}</ion-label>
+        </ion-col>
+      </ion-row>         
         <ion-row>
-          <ion-col col-3>
-            <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
-          </ion-col>
-          <ion-col col-3>
-            <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
-          </ion-col>
-          <ion-col col-3>
-            <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
-          </ion-col>
-          <ion-col col-3>
-            <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
-          </ion-col>
-        </ion-row>        
-        <ion-row>
-          <ion-col col-7>
-            <ion-label center>Alejandro</ion-label>
-          </ion-col> 
-          <ion-col col-5>
-            <ion-label center>B.L.A.D</ion-label>
-          </ion-col>           
+            <ion-label center>{{player_turn.name}}</ion-label>
+            <ion-label center>{{trick}}</ion-label>          
         </ion-row>
         <ion-row>           
           <ion-col col-6>
