@@ -12,24 +12,28 @@
         <ion-row>
           <ion-col col-3>
             <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
+            <ion-label></ion-label>
           </ion-col>
           <ion-col col-3>
             <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
+            <ion-label></ion-label>
           </ion-col>
           <ion-col col-3>
             <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
+            <ion-label></ion-label>
           </ion-col>
           <ion-col col-3>
             <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
+            <ion-label></ion-label>
           </ion-col>
         </ion-row>        
         <ion-row>
-          <button ion-button secondary full>Tap For a Trick</button>   
+          <button ion-button secondary (click)="changeTrick()" [disabled]="trials == 3" full>Tap For a Trick</button>   
         </ion-row>
         <ion-row> 
-          <ion-label center>True Spin Top Soul</ion-label>
+          <ion-label center>{{trick}}</ion-label>
         </ion-row>        
     </ion-grid>  
-    <button ion-button secondary full (click)="startGame()">Start Game</button>   
+    <button ion-button secondary full (click)="startGame()">Start Turn</button>   
     <button ion-button secondary full (click)="cancelGame()">Back</button>   
 </ion-content>
