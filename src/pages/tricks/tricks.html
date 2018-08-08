@@ -10,21 +10,21 @@
 <ion-content>
     <ion-grid>
         <ion-row>
-          <ion-col col-3>
+          <ion-col *ngIf="game_conf.player_1 != ''" col-3>
             <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
-            <ion-label></ion-label>
+            <ion-label>{{game_conf.player_1}}</ion-label>
           </ion-col>
-          <ion-col col-3>
+          <ion-col *ngIf="game_conf.player_2 != ''" col-3>
             <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
-            <ion-label></ion-label>
+            <ion-label>{{game_conf.player_2}}</ion-label>
           </ion-col>
-          <ion-col col-3>
+          <ion-col *ngIf="game_conf.player_3 != ''" col-3>
             <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
-            <ion-label></ion-label>
+            <ion-label>{{game_conf.player_3}}</ion-label>
           </ion-col>
-          <ion-col col-3>
+          <ion-col *ngIf="game_conf.player_4 != ''" col-3>
             <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
-            <ion-label></ion-label>
+            <ion-label>{{game_conf.player_4}}</ion-label>
           </ion-col>
         </ion-row>        
         <ion-row>

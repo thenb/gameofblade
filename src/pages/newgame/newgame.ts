@@ -64,15 +64,23 @@ export class NewGamePage {
     var players = 0;
     if(this.player_1.replace(/ /g,'') != ''){
       players++;
+    }else{
+      this.player_1 = '';
     }
     if(this.player_2.replace(/ /g,'') != ''){
       players++;
+    }else{
+      this.player_2 = '';
     }
     if(this.player_3.replace(/ /g,'') != ''){
       players++;
+    }else{
+      this.player_3 = '';
     }
     if(this.player_4.replace(/ /g,'') != ''){
       players++;
+    }else{
+      this.player_4 = '';
     }
 
     if(players>1){
