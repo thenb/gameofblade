@@ -42,24 +42,20 @@ export class TurnsPage {
   }
 
   nextPlayer() {
-    alert(this.player_status);
-    if(this.player_status == 'BLADE'){
+    if(this.player_turn_index < this.player_status.length){
       this.player_turn = this.player_status[this.player_turn_index];
       this.player_turn_index++;
-      this.nextPlayer();
-    }else{
-      if(this.player_turn_index < this.player_status.length){
-        this.player_turn = this.player_status[this.player_turn_index];
-      this.player_turn_index++;
-        
-      }else{
-        if(this.checkWinner()){
-          this.navCtrl.push(GameoverPage)
-        }else{
-          this.navCtrl.pop();
-        }    
+      if(this.player_status == 'BLADE'){
+        this.nextPlayer();
       }
+    }else{
+      if(this.checkWinner()){
+        this.navCtrl.push(GameoverPage)
+      }else{
+        this.navCtrl.pop();
+      }    
     }
+
   }
 
   checkWinner() {

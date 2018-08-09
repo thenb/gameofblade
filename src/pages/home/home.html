@@ -1,13 +1,11 @@
-<ion-header>  
-    <ion-navbar>
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>Game Of Blade</ion-title>
-      </ion-navbar>
-</ion-header>
-
-<ion-content padding>  
-  <button ion-button secondary full (click)="startGame()">New Game</button>
-  <button ion-button secondary full *ngIf="hasResume" (click)="resumeGame()" >Resume Game</button>
+<ion-content padding class="backgroundImage">  
+  <ion-grid>
+    <ion-row class="logo">
+    </ion-row>            
+    <ion-row class="padding-botton">  
+      <button ion-button full (click)="startGame()" class="startgame"></button>     
+      <button ion-button full  (click)="resumeGame()" class="share" ></button>   
+      <button ion-button full  (click)="resumeGame()" class="how" ></button>
+    </ion-row>       
+  </ion-grid>
 </ion-content>

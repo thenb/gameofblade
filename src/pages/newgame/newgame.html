@@ -1,56 +1,44 @@
-<ion-header>
-  <ion-navbar hideBackButton >
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Game of Blade</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content>
+<ion-content class="backgroundImage">
     <ion-grid>
-        <ion-row>
-          <ion-col col-12>Difficult</ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-4>
-              <button ion-button (click)="setEasy()" [class.selected]="level == 'easy'" full>Easy</button>
-          </ion-col>
-          <ion-col col-4>
-              <button ion-button (click)="setModerate()" [class.selected]="level == 'moderate'"  full>Moderate</button>
-          </ion-col>
-          <ion-col col-4>
-              <button ion-button (click)="setHard()" [class.selected]="level == 'hard'" full>Hard</button>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col col-12>Players</ion-col>
-        </ion-row>
-        <ion-row>           
-          <ion-item>
-            <ion-label><ion-icon ios="logo-apple" md="logo-android"></ion-icon></ion-label>
-            <ion-input type="text" placeholder="Player 1 name" [(ngModel)]="player_1"></ion-input>
-          </ion-item>           
-        </ion-row>
-        <ion-row>           
-          <ion-item>
-            <ion-label><ion-icon ios="logo-apple" md="logo-android"></ion-icon></ion-label>
-            <ion-input type="text" placeholder="Player 2 name" [(ngModel)]="player_2"></ion-input>
-          </ion-item>           
-        </ion-row>
-        <ion-row>           
-          <ion-item>
-            <ion-label><ion-icon ios="logo-apple" md="logo-android"></ion-icon></ion-label>
-            <ion-input type="text" placeholder="Player 3 name" [(ngModel)]="player_3"></ion-input>
-          </ion-item>          
-        </ion-row>
-        <ion-row>          
-          <ion-item>
-            <ion-label><ion-icon ios="logo-apple" md="logo-android"></ion-icon></ion-label>
-            <ion-input type="text" placeholder="Player 4 name" [(ngModel)]="player_4"></ion-input>
-          </ion-item>         
-        </ion-row>
-    </ion-grid>  
-    <button ion-button secondary full (click)="startTrick()">Start Game</button>   
-    <button ion-button secondary full (click)="cancelGame()">Cancel Game</button>   
+      <ion-row class="game-of-blade">          
+      </ion-row>
+      <ion-row text-center>  
+        <ion-label class="add-players-label">ADD PLAYERS</ion-label>       
+      </ion-row>
+      <ion-row text-center>  
+        <ion-label class="tab-below-label">Tap below to add</ion-label>       
+      </ion-row>        
+      <ion-row class="padding-10">           
+          <ion-col col-2 offset-1 class="player-1-icon">                
+          </ion-col> 
+          <ion-col col-7 offset-1 class="button-border-blue">
+              <ion-input type="text" placeholder="Player 1" [(ngModel)]="player_1"></ion-input>
+          </ion-col>        
+      </ion-row>
+      <ion-row class="padding-10">           
+          <ion-col col-2 offset-1 class="player-2-icon">                
+          </ion-col> 
+          <ion-col col-7 offset-1 class="button-border-green">
+              <ion-input type="text" placeholder="Player 2" [(ngModel)]="player_2"></ion-input>
+          </ion-col>        
+      </ion-row> 
+      <ion-row class="padding-10">           
+          <ion-col col-2 offset-1 class="player-3-icon">                
+          </ion-col> 
+          <ion-col col-7 offset-1 class="button-border-orange">
+              <ion-input type="text" placeholder="Player 3" [(ngModel)]="player_3"></ion-input>
+          </ion-col>        
+      </ion-row> 
+      <ion-row class="padding-10">            
+          <ion-col col-2 offset-1 class="player-4-icon">                
+          </ion-col> 
+          <ion-col col-7 offset-1 class="button-border-pink">
+              <ion-input type="text" placeholder="Player 4" [(ngModel)]="player_4"></ion-input>
+          </ion-col>        
+      </ion-row>
+      <ion-row>            
+        <ion-col col-6 offset-6 class="next" (click)="startTrick()"> 
+        </ion-col>                
+      </ion-row> 
+    </ion-grid> 
 </ion-content>

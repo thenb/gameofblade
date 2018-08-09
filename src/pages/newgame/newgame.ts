@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { TricksPage } from '../tricks/tricks';
+import { DifficultPage } from '../difficult/difficult';
 import { ToastController } from 'ionic-angular';
 import { CONTENT } from '../../assets/content/content';
 
@@ -10,7 +10,6 @@ import { CONTENT } from '../../assets/content/content';
 })
 export class NewGamePage {  
 
-  private level: string;
   private player_1: string;
   private player_2: string;
   private player_3: string;
@@ -18,7 +17,6 @@ export class NewGamePage {
   private player_status: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {    
-    this.level = 'easy';
     this.player_1 = 'Francisco';
     this.player_2 = 'Pedro';
     this.player_3 = '';
@@ -48,7 +46,7 @@ export class NewGamePage {
       window.localStorage.setItem('turn_number', '1');
       //put the tricks page on the stack and go to page
       //Call TricksPage with game conf as parameter
-      this.navCtrl.push(TricksPage, {level: this.level, player_status : this.player_status});
+      this.navCtrl.push(DifficultPage, {player_status : this.player_status});
     }else{
       this.presentToast(CONTENT.NewGame.erroCampoObrigatorio);
     }
@@ -57,19 +55,7 @@ export class NewGamePage {
   cancelGame() {   
     //remove the page from the stack and back to home
     this.navCtrl.pop();
-  }
- 
-  setEasy() {
-    this.level = 'easy';
-  }
-
-  setModerate() {
-    this.level = 'moderate';
-  }
-
-  setHard() {
-    this.level = 'hard';
-  }
+  }  
 
   validateGame() {
     var players = 0;

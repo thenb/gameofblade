@@ -1,0 +1,23 @@
+<ion-content class="backgroundImage">
+    <ion-grid>
+      <ion-row class="game-of-blade">          
+      </ion-row>
+      <ion-row text-center class="padding-10">  
+        <ion-label class="add-players-label">GAME DIFFICULTY?</ion-label>       
+      </ion-row> 
+      <ion-card class="background-transparent" (click)="setEasy()" [class.selected]="level == 'easy'">
+        <div class="font-tittle" text-center>EASY</div>
+        <div class="font-subtittle" text-center>Simple tricks, no spins into grinds</div>
+      </ion-card>
+      <ion-card class="background-transparent" (click)="setModerate()" [class.selected]="level == 'moderate'">
+        <div class="card-title font-tittle" text-center>MODERATE</div>
+        <div class="card-subtitle font-subtittle" text-center>Inspins, truespinsm alleyoops</div>
+      </ion-card>
+      <ion-card class="background-transparent" (click)="setDifficult()" [class.selected]="level == 'difficult'">
+        <div class="card-title font-tittle" text-center>DIFFICULT</div>
+        <div class="card-subtitle font-subtittle" text-center>Fullcabs, 360s into grinds, etc</div>
+      </ion-card> 
+      <ion-col col-2 class="back" (click)="back()"></ion-col>             
+      <ion-col col-6 offset-6 class="next" (click)="startTrick()"></ion-col>                
+    </ion-grid> 
+</ion-content>
