@@ -11,6 +11,7 @@ import { GotitPage } from '../pages/gotit/gotit';
 import { FailPage } from '../pages/fail/fail';
 import { GameoverPage } from '../pages/gameover/gameover';
 import { DifficultPage } from '../pages/difficult/difficult';
+import { LoadingPage } from '../pages/loading-game/loading-game';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,7 +26,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     GotitPage,
     FailPage,
     GameoverPage,
-    DifficultPage
+    DifficultPage,
+    LoadingPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     GotitPage,
     FailPage,
     GameoverPage,
-    DifficultPage
+    DifficultPage,
+    LoadingPage
   ],
   providers: [
     StatusBar,

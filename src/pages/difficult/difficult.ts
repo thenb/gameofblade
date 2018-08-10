@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { TricksPage } from '../tricks/tricks';
+import { LoadingPage } from '../loading-game/loading-game';
 import { ToastController } from 'ionic-angular';
 import { CONTENT } from '../../assets/content/content';
 
@@ -14,43 +14,41 @@ export class DifficultPage {
   private player_status: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {    
-    this.level = 'easy'; 
-    this.player_status = this.navParams.get('player_status');   
+    this.level = 'easy';    
   }
 
   startTrick() {    
-    this.navCtrl.push(TricksPage, {level: this.level, player_status : this.player_status});
+    this.navCtrl.push(LoadingPage);
   }
 
-  back() {   
-    //remove the page from the stack and back to home
+  back() {
     this.navCtrl.pop();
   }
  
   setEasy() {
     this.level = 'easy';
+    window.localStorage.setItem('level',this.level); 
   }
 
   setModerate() {
     this.level = 'moderate';
+    window.localStorage.setItem('level',this.level); 
   }
 
   setDifficult() {
     this.level = 'difficult';
+    window.localStorage.setItem('level',this.level); 
   } 
 
-  presentToast(data) {
-    
+  presentToast(data) {    
     let toast = this.toastCtrl.create({
       message: JSON.stringify(data),
       duration: 3000,
       position: 'top'
     });
-
     toast.onDidDismiss(() => {
       console.log('Dismissed toast');
-    });
-  
+    });  
     toast.present();
   }
 

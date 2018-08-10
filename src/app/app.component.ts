@@ -27,11 +27,11 @@ export class MyApp {
       
       //if theres something on turn number
       
-      let turn_number = window.localStorage.getItem('turn_number');
-       if(!turn_number){ 
-        let turn_number = '1';
-        window.localStorage.setItem('turn_number', turn_number);
-      } 
+      //let turn_number = window.localStorage.getItem('turn_number');
+      // if(!turn_number){ 
+      //  let turn_number = '1';
+      //  window.localStorage.setItem('turn_number', turn_number);
+      //} 
     });
   }
   
