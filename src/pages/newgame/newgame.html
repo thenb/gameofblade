@@ -9,28 +9,36 @@
         <ion-label class="tab-below-label">Tap below to add</ion-label>       
       </ion-row>        
       <ion-row class="padding-10">           
-          <ion-col col-2 offset-1 class="player-1-icon">                
+          <ion-col *ngIf="player_1 == ''"col-2 offset-1 class="player-1-icon">              
+          </ion-col>  
+          <ion-col *ngIf="player_1 != ''"col-2 offset-1 class="player-1-icon-selected">               
           </ion-col> 
           <ion-col col-7 offset-1 class="button-border-blue">
               <ion-input type="text" placeholder="Player 1" [(ngModel)]="player_1"></ion-input>
           </ion-col>        
       </ion-row>
-      <ion-row class="padding-10">           
-          <ion-col col-2 offset-1 class="player-2-icon">                
+      <ion-row class="padding-10">            
+          <ion-col *ngIf="player_2 == ''"col-2 offset-1 class="player-2-icon">              
+          </ion-col>  
+          <ion-col *ngIf="player_2 != ''"col-2 offset-1 class="player-2-icon-selected">               
           </ion-col> 
           <ion-col col-7 offset-1 class="button-border-green">
               <ion-input type="text" placeholder="Player 2" [(ngModel)]="player_2"></ion-input>
           </ion-col>        
       </ion-row> 
-      <ion-row class="padding-10">           
-          <ion-col col-2 offset-1 class="player-3-icon">                
+      <ion-row class="padding-10">               
+          <ion-col *ngIf="player_3 == ''"col-2 offset-1 class="player-3-icon">              
+          </ion-col>  
+          <ion-col *ngIf="player_3 != ''"col-2 offset-1 class="player-3-icon-selected">               
           </ion-col> 
           <ion-col col-7 offset-1 class="button-border-orange">
               <ion-input type="text" placeholder="Player 3" [(ngModel)]="player_3"></ion-input>
           </ion-col>        
       </ion-row> 
-      <ion-row class="padding-10">            
-          <ion-col col-2 offset-1 class="player-4-icon">                
+      <ion-row class="padding-10">         
+          <ion-col *ngIf="player_4 == ''"col-2 offset-1 class="player-4-icon">              
+          </ion-col>  
+          <ion-col *ngIf="player_4 != ''"col-2 offset-1 class="player-4-icon-selected">               
           </ion-col> 
           <ion-col col-7 offset-1 class="button-border-pink">
               <ion-input type="text" placeholder="Player 4" [(ngModel)]="player_4"></ion-input>

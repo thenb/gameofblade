@@ -24,16 +24,32 @@
     background: url('../../assets/emoji/48x48/@1x/blue/zzz.png') no-repeat center center fixed;
 }
 
+.player-1-icon-selected{
+    background: url('../../assets/emoji/48x48/@1x/blue/happy.png') no-repeat center center fixed;
+}
+
 .player-2-icon{
     background: url('../../assets/emoji/48x48/@1x/green/zzz.png') no-repeat center center fixed;
+}
+
+.player-2-icon-selected{
+    background: url('../../assets/emoji/48x48/@1x/green/happy.png') no-repeat center center fixed;
 }
 
 .player-3-icon{
     background: url('../../assets/emoji/48x48/@1x/yellow/zzz.png') no-repeat center center fixed;
 }
 
+.player-3-icon-selected{
+    background: url('../../assets/emoji/48x48/@1x/yellow/happy.png') no-repeat center center fixed;
+}
+
 .player-4-icon{
     background: url('../../assets/emoji/48x48/@1x/red/zzz.png') no-repeat center center fixed;
+}
+
+.player-4-icon-selected{
+    background: url('../../assets/emoji/48x48/@1x/red/happy.png') no-repeat center center fixed;
 }
 
 .button-border-blue{
