@@ -40,24 +40,14 @@ export class TricksPage {
     }  
   }
 
-
-  callBack = function(_params) {
-    return new Promise((resolve, reject) => {
-              this.changeTrick();
-              this.trials = 0;
-              resolve();
-          });
-  }
-
-  startGame() {
+  startTurn() {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     let turn_number = +window.localStorage.getItem('turn_number');
     turn_number++;
     this.turn = turn_number;
     window.localStorage.setItem('turn_number', turn_number.toString());
-    //this.navCtrl.push(TurnsPage, {trick: this.trick, player_status: this.player_status, callBack : this.callBack});
-    this.changeTrick();
+    this.navCtrl.push(TurnsPage, {trick: this.trick});
   }
 
   cancelGame() {

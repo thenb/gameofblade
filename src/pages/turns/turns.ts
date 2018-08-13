@@ -11,23 +11,31 @@ export class TurnsPage {
 
   private trick : string;
   private game_conf : any;
-  private player_status : any;
   private player_turn : any;
   private player_turn_index : number;
   private blade : any;
   private callback : any;
   private turn : any;
+  private player_1_status : any;
+  private player_2_status : any;
+  private player_3_status : any;
+  private player_4_status : any;
+  private player_status: any
 
   private round: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {    
     this.trick = this.navParams.get('trick');
-    this.player_status = this.navParams.get('player_status');
     this.callback = this.navParams.get("callback")
     this.player_turn_index = 0;
     this.blade = ['B', 'L', 'A', 'D', 'E'];
     this.turn =  window.localStorage.getItem('turn_number');
-    this.nextPlayer();
+    this.player_1_status = window.localStorage.getItem('player_1_status');
+    this.player_2_status = window.localStorage.getItem('player_2_status');
+    this.player_3_status = window.localStorage.getItem('player_3_status');
+    this.player_4_status = window.localStorage.getItem('player_4_status');
+    this.player_status[this.player_1_status, this.player_2_status, this.player_3_status, this.player_4_status];
+    //this.nextPlayer();
   }
 
 

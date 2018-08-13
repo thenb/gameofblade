@@ -30,20 +30,20 @@ export class NewGamePage {
     if(this.validateGame()){ 
       if(this.player_1 != ''){
         this.player_1_status ={name:this.player_1, status:''};
-        window.localStorage.setItem('player_1_status', this.player_1_status);
-      }      
+      }  
+      window.localStorage.setItem('player_1_status', this.player_1_status);    
       if(this.player_2 != ''){
         this.player_2_status ={name:this.player_2, status:''};
-        window.localStorage.setItem('player_2_status', this.player_2_status);
       }
+      window.localStorage.setItem('player_2_status', this.player_2_status);
       if(this.player_3 != ''){
         this.player_3_status ={name:this.player_3, status:''};
-        window.localStorage.setItem('player_3_status', this.player_3_status);
       }
+      window.localStorage.setItem('player_3_status', this.player_3_status);
       if(this.player_4 != ''){
         this.player_4_status ={name:this.player_4, status:''};
-        window.localStorage.setItem('player_4_status', this.player_4_status);
       }
+      window.localStorage.setItem('player_4_status', this.player_4_status);
       window.localStorage.setItem('turn_number', '1');      
       this.navCtrl.push(DifficultPage);
     }else{

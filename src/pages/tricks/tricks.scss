@@ -1,15 +1,31 @@
 .round-label{
     font-size: 22px;
+    font-family: Bangers;
     color: white;
     padding-top:0px;
 }
 
-.generate-tricks-button{
-    background: url('../../assets/buttons/generate btn.png') no-repeat center center fixed;
+.generate-tricks-button-1{
+    background: url('../../assets/buttons/generate btn.png') no-repeat center center fixed, url('../../assets/buttons/generateBtn-border-1.png') no-repeat center center fixed;
+    height: 350px;
+}
+
+.generate-tricks-button-2{
+    background: url('../../assets/buttons/generate btn.png') no-repeat center center fixed, url('../../assets/buttons/generateBtn-border-2.png') no-repeat center center fixed;
+    height: 350px;
+}
+
+.generate-tricks-button-3{
+    background: url('../../assets/buttons/generate btn.png') no-repeat center center fixed, url('../../assets/buttons/generateBtn-border-3.png') no-repeat center center fixed;
+    height: 350px;
+}
+
+.generate-tricks-button-4{
+    background: url('../../assets/buttons/generate btn.png') no-repeat center center fixed, url('../../assets/buttons/generateBtn-border-0.png') no-repeat center center fixed;
     height: 350px;
 }
 
 .set-trick{
-    background: url('../../assets/buttons/fullwidth-startBtn.png') no-repeat center center fixed;
+    background: url('../../assets/buttons/fullwidth-setTrick.png') no-repeat center center fixed;
     height: 50px;
 }
