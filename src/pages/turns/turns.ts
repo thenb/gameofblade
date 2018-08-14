@@ -52,7 +52,6 @@ export class TurnsPage {
     if(this.player_2_name != 'undefined' && this.player_2_name != '' && this.player_2_name != null){
       this.players[1] = {name:this.player_2_name, status:this.player_2_status, number:1};
     }
-    alert(this.player_3_status)
     if(this.player_3_name != 'undefined' && this.player_3_name != '' && this.player_3_name != null){
       this.players[2] = {name:this.player_3_name, status:this.player_3_status, number:2};
     }
@@ -66,23 +65,20 @@ export class TurnsPage {
 
   failTrick() {
     this.players[this.actual_player].status++;
+    //alert(this.players[this.actual_player].status);
     if(this.players[this.actual_player].number==0){
-      alert( this.player_1_status);
       this.player_1_status = this.players[this.actual_player].status;
       window.localStorage.setItem('player_1_status', this.player_1_status);
     }
     if(this.players[this.actual_player].number==1){
-      alert( this.player_2_status);
       this.player_2_status = this.players[this.actual_player].status;
       window.localStorage.setItem('player_2_status', this.player_2_status);
     }
     if(this.players[this.actual_player].number==2){
-      alert( this.player_3_status);
       this.player_3_status = this.players[this.actual_player].status;
       window.localStorage.setItem('player_3_status', this.player_3_status);
     }
     if(this.players[this.actual_player].number==3){
-      alert( this.player_4_status);
       this.player_4_status = this.players[this.actual_player].status;
       window.localStorage.setItem('player_4_status', this.player_4_status);
     }    

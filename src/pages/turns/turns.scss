@@ -149,3 +149,52 @@
     color: white;
     padding-top:0px;
 }
+
+.status-0{
+    background: url('../../assets/ui/blade-0.png') no-repeat center center fixed;
+    height: 70px;
+}
+
+.status-1{
+    background: url('../../assets/ui/blade-1.png') no-repeat center center fixed;
+    height: 70px;
+}
+
+.status-2{
+    background: url('../../assets/ui/blade-2.png') no-repeat center center fixed;
+    height: 70px;
+}
+
+.status-3{
+    background: url('../../assets/ui/blade-3.png') no-repeat center center fixed;
+    height: 70px;
+}
+
+.status-4{
+    background: url('../../assets/ui/blade-4.png') no-repeat center center fixed;
+    height: 70px;
+}
+
+.status-5{
+    background: url('../../assets/ui/blade-5.png') no-repeat center center fixed;
+    height: 70px;
+}
+
+.fail-trick{
+    background: url('../../assets/buttons/short-nayBtn.png') no-repeat center center fixed;
+    height: 50px;
+}
+
+.got-it{
+    background: url('../../assets/buttons/short-yayBtn.png') no-repeat center center fixed;
+    height: 50px;
+}
+
+
+.turn-trick{
+    font-size: 30px;
+    font-family: Bangers;
+    color: white;
+    font-weight: bold;
+    height: 350px;
+}

@@ -10,7 +10,6 @@ import { CONTENT } from '../../assets/content/content';
 export class TricksPage {  
 
   private trick : string;
-  private trials : number;
   private trick_list : any;
   private level : any;
   private player_1_status : any;
@@ -22,10 +21,8 @@ export class TricksPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {    
     this.trick = '';
-    this.trials = 0;
     this.count_tricks = 0;   
     this.level = window.localStorage.getItem('level');  
-   alert('aqui entra 1 vez só?')
     if(this.level == 'easy'){
       this.trick_list = Object.assign([], CONTENT.easy_tricks);
     }else if(this.level == 'moderate'){
@@ -42,6 +39,7 @@ export class TricksPage {
    // this.turn = turn_number++;
    // window.localStorage.setItem('turn_number', turn_number.toString());
     this.navCtrl.push(TurnsPage, {trick: this.trick});
+    this.count_tricks = 0;
   }
 
   cancelGame() {
