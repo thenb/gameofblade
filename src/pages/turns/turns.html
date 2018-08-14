@@ -1,67 +1,67 @@
 <ion-content padding class="backgroundImage">
     <ion-grid>
-      <ion-label class="round-label">ROUND {{turn}}</ion-label>     
-      <ion-row>
-          <ion-col *ngIf="player_1_status == undefined"col-2 offset-1 class="player-1-icon">       
-            </ion-col>    
-          <ion-col *ngIf="player_1_status.status == ''"col-2 offset-1 class="player-1-icon-happy">       
-            </ion-col>   
-          <ion-col *ngIf="player_1_status.status == 'B'"col-2 offset-1 class="player-1-icon-pleased">         
-            </ion-col> 
-          <ion-col *ngIf="player_1_status.status == 'Bl'"col-2 offset-1 class="player-1-icon-flushed">         
-            </ion-col> 
-          <ion-col *ngIf="player_1_status.status == 'BlA'"col-2 offset-1 class="player-1-icon-scared">         
-            </ion-col> 
-          <ion-col *ngIf="player_1_status.status == 'BlAD'"col-2 offset-1 class="player-1-icon-cry">         
-            </ion-col> 
-          <ion-col *ngIf="player_1_status.status == 'BlADE'"col-2 offset-1 class="player-1-icon-shocked">         
-            </ion-col> 
+      <ion-row>   
+      <ion-label class="turn-label" col-3>ROUND {{turn}}</ion-label>     
+      <ion-col *ngIf="player_1_status == 'undefined'"col-2 class="p-1-icon">       
+      </ion-col>    
+      <ion-col *ngIf="player_1_status == 0"col-2 class="p-1-icon-happy">       
+      </ion-col>   
+      <ion-col *ngIf="player_1_status == 1"col-2 class="p-1-icon-pleased">         
+      </ion-col> 
+      <ion-col *ngIf="player_1_status == 2"col-2 class="p-1-icon-flushed">         
+      </ion-col> 
+      <ion-col *ngIf="player_1_status == 3"col-2 class="p-1-icon-scared">         
+      </ion-col> 
+      <ion-col *ngIf="player_1_status == 4"col-2 class="p-1-icon-cry">         
+      </ion-col> 
+      <ion-col *ngIf="player_1_status == 5"col-2 class="p-1-icon-shocked">         
+      </ion-col> 
 
-          <ion-col *ngIf="player_2_status == undefined"col-2 offset-1 class="player-2-icon">       
-            </ion-col>    
-          <ion-col *ngIf="player_2_status.status == ''"col-2 offset-1 class="player-2-icon-happy">       
-            </ion-col>   
-          <ion-col *ngIf="player_2_status.status == 'B'"col-2 offset-1 class="player-2-icon-pleased">         
-            </ion-col> 
-          <ion-col *ngIf="player_2_status.status == 'Bl'"col-2 offset-1 class="player-2-icon-flushed">         
-            </ion-col> 
-          <ion-col *ngIf="player_2_status.status == 'BlA'"col-2 offset-1 class="player-2-icon-scared">         
-            </ion-col> 
-          <ion-col *ngIf="player_2_status.status == 'BlAD'"col-2 offset-1 class="player-2-icon-cry">         
-            </ion-col> 
-          <ion-col *ngIf="player_2_status.status == 'BlADE'"col-2 offset-1 class="player-2-icon-shocked">         
-            </ion-col> 
+      <ion-col *ngIf="player_2_status == 'undefined'"col-2 class="p-2-icon">       
+      </ion-col>    
+      <ion-col *ngIf="player_2_status == 0"col-2 class="p-2-icon-happy">       
+      </ion-col>   
+      <ion-col *ngIf="player_2_status == 1"col-2 class="p-2-icon-pleased">         
+      </ion-col> 
+      <ion-col *ngIf="player_2_status == 2"col-2 class="p-2-icon-flushed">         
+      </ion-col> 
+      <ion-col *ngIf="player_2_status == 3"col-2 class="p-2-icon-scared">         
+      </ion-col> 
+      <ion-col *ngIf="player_2_status == 4"col-2 class="p-2-icon-cry">         
+      </ion-col> 
+      <ion-col *ngIf="player_2_status == 5"col-2 class="p-2-icon-shocked">         
+      </ion-col> 
 
-          <ion-col *ngIf="player_3_status == undefined"col-2 offset-1 class="player-3-icon">       
-            </ion-col>    
-          <ion-col *ngIf="player_3_status.status == ''"col-2 offset-1 class="player-3-icon-happy">       
-            </ion-col>   
-          <ion-col *ngIf="player_3_status.status == 'B'"col-2 offset-1 class="player-3-icon-pleased">         
-            </ion-col> 
-          <ion-col *ngIf="player_3_status.status == 'Bl'"col-2 offset-1 class="player-3-icon-flushed">         
-            </ion-col> 
-          <ion-col *ngIf="player_3_status.status == 'BlA'"col-2 offset-1 class="player-3-icon-scared">         
-            </ion-col> 
-          <ion-col *ngIf="player_3_status.status == 'BlAD'"col-2 offset-1 class="player-3-icon-cry">         
-            </ion-col> 
-          <ion-col *ngIf="player_3_status.status == 'BlADE'"col-2 offset-1 class="player-3-icon-shocked">         
-            </ion-col> 
+      <ion-col *ngIf="player_3_status == 'undefined'"col-2 class="p-3-icon">       
+      </ion-col>    
+      <ion-col *ngIf="player_3_status == 0"col-2 class="p-3-icon-happy">       
+      </ion-col>   
+      <ion-col *ngIf="player_3_status == 1"col-2 class="p-3-icon-pleased">         
+      </ion-col> 
+      <ion-col *ngIf="player_3_status == 2"col-2 class="p-3-icon-flushed">         
+      </ion-col> 
+      <ion-col *ngIf="player_3_status == 3"col-2 class="p-3-icon-scared">         
+      </ion-col> 
+      <ion-col *ngIf="player_3_status == 4"col-2 class="p-3-icon-cry">         
+      </ion-col> 
+      <ion-col *ngIf="player_3_status == 5"col-2 class="p-3-icon-shocked">         
+      </ion-col> 
 
-          <ion-col *ngIf="player_4_status == undefined"col-2 offset-1 class="player-4-icon">       
-            </ion-col>    
-          <ion-col *ngIf="player_4_status.status == ''"col-2 offset-1 class="player-4-icon-happy">       
-            </ion-col>   
-          <ion-col *ngIf="player_4_status.status == 'B'"col-2 offset-1 class="player-4-icon-pleased">         
-            </ion-col> 
-          <ion-col *ngIf="player_4_status.status == 'Bl'"col-2 offset-1 class="player-4-icon-flushed">         
-            </ion-col> 
-          <ion-col *ngIf="player_4_status.status == 'BlA'"col-2 offset-1 class="player-4-icon-scared">         
-            </ion-col> 
-          <ion-col *ngIf="player_4_status.status == 'BlAD'"col-2 offset-1 class="player-4-icon-cry">         
-            </ion-col> 
-          <ion-col *ngIf="player_4_status.status == 'BlADE'"col-2 offset-1 class="player-4-icon-shocked">         
-            </ion-col> 
-      </ion-row>      
+      <ion-col *ngIf="player_4_status == 'undefined'"col-2 class="p-4-icon">       
+      </ion-col>    
+      <ion-col *ngIf="player_4_status == 0"col-2 class="p-4-icon-happy">       
+      </ion-col>   
+      <ion-col *ngIf="player_4_status == 1"col-2 class="p-4-icon-pleased">         
+      </ion-col> 
+      <ion-col *ngIf="player_4_status == 2"col-2 class="p-4-icon-flushed">         
+      </ion-col> 
+      <ion-col *ngIf="player_4_status == 3"col-2 class="p-4-icon-scared">         
+      </ion-col> 
+      <ion-col *ngIf="player_4_status == 4"col-2 class="p-4-icon-cry">         
+      </ion-col> 
+      <ion-col *ngIf="player_4_status == 5"col-2 class="p-4-icon-shocked">         
+      </ion-col> 
+    </ion-row>   
         <ion-row>
             <ion-label center>{{player_turn.name}}</ion-label>
             <ion-label center>{{trick}}</ion-label>          

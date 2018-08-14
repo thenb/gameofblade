@@ -23,14 +23,9 @@ export class TricksPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {    
     this.trick = '';
     this.trials = 0;
-    this.count_tricks = 0;
-    this.turn = window.localStorage.getItem('turn_number');
-    this.level = window.localStorage.getItem('level');    
-    this.player_1_status = window.localStorage.getItem('player_1_status');
-    this.player_2_status = window.localStorage.getItem('player_2_status');
-    this.player_3_status = window.localStorage.getItem('player_3_status');
-    this.player_4_status = window.localStorage.getItem('player_4_status');
-   
+    this.count_tricks = 0;   
+    this.level = window.localStorage.getItem('level');  
+   alert('aqui entra 1 vez só?')
     if(this.level == 'easy'){
       this.trick_list = Object.assign([], CONTENT.easy_tricks);
     }else if(this.level == 'moderate'){
@@ -43,10 +38,9 @@ export class TricksPage {
   startTurn() {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    let turn_number = +window.localStorage.getItem('turn_number');
-    turn_number++;
-    this.turn = turn_number;
-    window.localStorage.setItem('turn_number', turn_number.toString());
+    //let turn_number = +window.localStorage.getItem('turn_number');
+   // this.turn = turn_number++;
+   // window.localStorage.setItem('turn_number', turn_number.toString());
     this.navCtrl.push(TurnsPage, {trick: this.trick});
   }
 
@@ -70,7 +64,10 @@ export class TricksPage {
     this.trick = this.trick_list[key];
     this.trick_list.splice(key, 1);
     this.count_tricks++;
-    //this.trials++;
+  }
+
+  ionViewDidEnter() {
+    this.turn = window.localStorage.getItem('turn_number');
   }
  
 }
