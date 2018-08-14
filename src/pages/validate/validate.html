@@ -1,31 +1,120 @@
-<ion-header>
-  <ion-navbar hideBackButton >
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Turn {{turn-1}}</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content>
+<ion-content padding class="backgroundImage">
     <ion-grid>
-      <ion-row>
-        <ion-col *ngFor="let p of player_status" col-3>
-          <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
-          <ion-label>{{p.name}}</ion-label>
-          <ion-label>{{p.status}}</ion-label>
-        </ion-col>
-      </ion-row>         
-        <ion-row>
-            <ion-label center>{{player_turn.name}}</ion-label>
-            <ion-label center>{{trick}}</ion-label>          
+      <ion-row>   
+      <ion-label class="turn-label" col-3>ROUND {{turn}}</ion-label>     
+      <ion-col *ngIf="player_1_status == 'undefined'"col-2 class="p-1-icon">       
+      </ion-col>    
+      <ion-col *ngIf="player_1_status == 0"col-2 class="p-1-icon-happy">       
+      </ion-col>   
+      <ion-col *ngIf="player_1_status == 1"col-2 class="p-1-icon-pleased">         
+      </ion-col> 
+      <ion-col *ngIf="player_1_status == 2"col-2 class="p-1-icon-flushed">         
+      </ion-col> 
+      <ion-col *ngIf="player_1_status== 3"col-2 class="p-1-icon-scared">         
+      </ion-col> 
+      <ion-col *ngIf="player_1_status == 4"col-2 class="p-1-icon-cry">         
+      </ion-col> 
+      <ion-col *ngIf="player_1_status == 5"col-2 class="p-1-icon-shocked">         
+      </ion-col> 
+
+      <ion-col *ngIf="player_2_status == 'undefined'"col-2 class="p-2-icon">       
+      </ion-col>    
+      <ion-col *ngIf="player_2_status == 0"col-2 class="p-2-icon-happy">       
+      </ion-col>   
+      <ion-col *ngIf="player_2_status == 1"col-2 class="p-2-icon-pleased">         
+      </ion-col> 
+      <ion-col *ngIf="player_2_status == 2"col-2 class="p-2-icon-flushed">         
+      </ion-col> 
+      <ion-col *ngIf="player_2_status == 3"col-2 class="p-2-icon-scared">         
+      </ion-col> 
+      <ion-col *ngIf="player_2_status == 4"col-2 class="p-2-icon-cry">         
+      </ion-col> 
+      <ion-col *ngIf="player_2_status == 5"col-2 class="p-2-icon-shocked">         
+      </ion-col> 
+
+      <ion-col *ngIf="player_3_status == 'undefined'"col-2 class="p-3-icon">       
+      </ion-col>    
+      <ion-col *ngIf="player_3_status == 0"col-2 class="p-3-icon-happy">       
+      </ion-col>   
+      <ion-col *ngIf="player_3_status == 1"col-2 class="p-3-icon-pleased">         
+      </ion-col> 
+      <ion-col *ngIf="player_3_status== 2"col-2 class="p-3-icon-flushed">         
+      </ion-col> 
+      <ion-col *ngIf="player_3_status == 3"col-2 class="p-3-icon-scared">         
+      </ion-col> 
+      <ion-col *ngIf="player_3_status == 4"col-2 class="p-3-icon-cry">         
+      </ion-col> 
+      <ion-col *ngIf="player_3_status== 5"col-2 class="p-3-icon-shocked">         
+      </ion-col> 
+
+      <ion-col *ngIf="player_4_status == 'undefined'"col-2 class="p-4-icon">       
+      </ion-col>    
+      <ion-col *ngIf="player_4_status == 0"col-2 class="p-4-icon-happy">       
+      </ion-col>   
+      <ion-col *ngIf="player_4_status == 1"col-2 class="p-4-icon-pleased">         
+      </ion-col> 
+      <ion-col *ngIf="player_4_status == 2"col-2 class="p-4-icon-flushed">         
+      </ion-col> 
+      <ion-col *ngIf="player_4_status == 3"col-2 class="p-4-icon-scared">         
+      </ion-col> 
+      <ion-col *ngIf="player_4_status == 4"col-2 class="p-4-icon-cry">         
+      </ion-col> 
+      <ion-col *ngIf="player_4_status == 5"col-2 class="p-4-icon-shocked">         
+      </ion-col> 
+    </ion-row>   
+        <ion-row> 
+            <ion-col *ngIf="this.actual_player == 0 && player_1_status == 0"col-2 class="p-1-icon-happy-2x"></ion-col>   
+            <ion-col *ngIf="this.actual_player == 0 && player_1_status == 1"col-2 class="p-1-icon-pleased-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 0 && player_1_status == 2"col-2 class="p-1-icon-flushed-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 0 && player_1_status == 3"col-2 class="p-1-icon-scared-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 0 && player_1_status == 4"col-2 class="p-1-icon-cry-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 0 && player_1_status == 5"col-2 class="p-1-icon-shocked-2x"></ion-col> 
+        
+            <ion-col *ngIf="this.actual_player == 1 && player_2_status == 0"col-2 class="p-2-icon-happy-2x"></ion-col>   
+            <ion-col *ngIf="this.actual_player == 1 && player_2_status == 1"col-2 class="p-2-icon-pleased-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 1 && player_2_status == 2"col-2 class="p-2-icon-flushed-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 1 && player_2_status == 3"col-2 class="p-2-icon-scared-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 1 && player_2_status == 4"col-2 class="p-2-icon-cry-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 1 && player_2_status == 5"col-2 class="p-2-icon-shocked-2x"></ion-col> 
+      
+            <ion-col *ngIf="this.actual_player == 2 && player_3_status == 0"col-2 class="p-3-icon-happy-2x"></ion-col>   
+            <ion-col *ngIf="this.actual_player == 2 && player_3_status == 1"col-2 class="p-3-icon-pleased-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 2 && player_3_status == 2"col-2 class="p-3-icon-flushed-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 2 && player_3_status == 3"col-2 class="p-3-icon-scared-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 2 && player_3_status == 4"col-2 class="p-3-icon-cry-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 2 && player_3_status == 5"col-2 class="p-3-icon-shocked-2x"></ion-col> 
+        
+            <ion-col *ngIf="this.actual_player == 3 && player_4_status == 0"col-2 class="p-4-icon-happy-2x"></ion-col>   
+            <ion-col *ngIf="this.actual_player == 3 && player_4_status == 1"col-2 class="p-4-icon-pleased-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 3 && player_4_status == 2"col-2 class="p-4-icon-flushed-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 3 && player_4_status == 3"col-2 class="p-4-icon-scared-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 3 && player_4_status == 4"col-2 class="p-4-icon-cry-2x"></ion-col> 
+            <ion-col *ngIf="this.actual_player == 3 && player_4_status == 5"col-2 class="p-4-icon-shocked-2x"></ion-col>  
+
+            <ion-col>
+              <ion-row>
+                  <ion-label center class="tab-below-label">{{player_turn.name}}</ion-label>
+              </ion-row>
+              <ion-row center full *ngIf="player_turn.status == 0" class="status-0"></ion-row>
+              <ion-row center full *ngIf="player_turn.status == 1" class="status-1"></ion-row>
+              <ion-row center full *ngIf="player_turn.status == 2" class="status-2"></ion-row>
+              <ion-row center full *ngIf="player_turn.status == 3" class="status-3"></ion-row>
+              <ion-row center full *ngIf="player_turn.status == 4" class="status-4"></ion-row>
+              <ion-row center full *ngIf="player_turn.status == 5" class="status-5"></ion-row>
+            </ion-col>       
         </ion-row>
-        <ion-row>           
+          <ion-col col-6 offset-3 text-center>
+              <ion-label no-repeat center center fixed class="turn-trick">{{trick}}</ion-label>
+          </ion-col>
+        <ion-row>
+
+        </ion-row>
+        <ion-row class="padding-botton">           
           <ion-col col-6>
-            <button ion-button danger full (click)="failTrick()">Fail</button>  
+            <button ion-button danger full (click)="failTrick()" class="fail-trick" ></button>  
           </ion-col> 
           <ion-col col-6>
-            <button ion-button secondary full (click)="gotTrick()">Got It</button>  
+            <button ion-button secondary full (click)="gotTrick()" class="got-it" ></button>  
           </ion-col>
         </ion-row>        
     </ion-grid>      

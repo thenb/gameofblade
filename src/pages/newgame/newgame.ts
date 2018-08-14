@@ -18,6 +18,8 @@ export class NewGamePage {
   private player_2_status: any;
   private player_3_status: any;
   private player_4_status: any;
+  private players: any;
+  private actual_player: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {    
     this.player_1_name = 'Francisco';
@@ -48,7 +50,27 @@ export class NewGamePage {
         this.player_4_status = 0; 
         window.localStorage.setItem('player_4_status', this.player_4_status);
       }     
-      window.localStorage.setItem('turn_number', '1');      
+      window.localStorage.setItem('turn_number', '1');  
+      this.players = [];
+      if(this.player_1_name != 'undefined' && this.player_1_name != '' && this.player_1_name != null){
+        this.players[0] = {name:this.player_1_name, status:this.player_1_status, number:0};
+        window.localStorage.setItem('player_1', JSON.stringify(this.players[0]));
+      }
+      if(this.player_2_name != 'undefined' && this.player_2_name != '' && this.player_2_name != null){
+        this.players[1] = {name:this.player_2_name, status:this.player_2_status, number:1};
+        window.localStorage.setItem('player_2', JSON.stringify(this.players[1]));
+      }
+      if(this.player_3_name != 'undefined' && this.player_3_name != '' && this.player_3_name != null){
+        this.players[2] = {name:this.player_3_name, status:this.player_3_status, number:2};
+        window.localStorage.setItem('player_3', JSON.stringify(this.players[2]));
+      }
+      if(this.player_4_name != 'undefined' && this.player_4_name != '' && this.player_4_name != null){
+        this.players[3]= {name:this.player_4_name, status:this.player_4_status, number:3};
+        window.localStorage.setItem('player_4', JSON.stringify(this.players[3]));
+      }
+      this.actual_player = 0;
+      window.localStorage.setItem('players', JSON.stringify(this.players));
+      window.localStorage.setItem('actual_player', this.actual_player);    
       this.navCtrl.push(DifficultPage);
     }else{
       this.presentToast(CONTENT.NewGame.erroCampoObrigatorio);

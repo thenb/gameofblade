@@ -14,7 +14,8 @@ export class DifficultPage {
   private player_status: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {    
-    this.level = 'easy';    
+    this.level = 'easy';  
+    window.localStorage.setItem('level',this.level);   
   }
 
   startTrick() {    
@@ -36,7 +37,7 @@ export class DifficultPage {
   }
 
   setDifficult() {
-    this.level = 'difficult';
+    this.level = 'difficult';    
     window.localStorage.setItem('level',this.level); 
   } 
 
