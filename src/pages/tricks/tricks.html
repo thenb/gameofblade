@@ -2,7 +2,7 @@
     <ion-grid>
        <ion-row>   
         <ion-label class="turn-label" col-3>ROUND {{turn}}</ion-label>     
-        <ion-col *ngIf="player_1_status == 'undefined'"col-2 class="p-1-icon">       
+        <ion-col *ngIf="player_1_status == 'undefined' || player_1_status==null"col-2 class="p-1-icon">       
         </ion-col>    
         <ion-col *ngIf="player_1_status == 0"col-2 class="p-1-icon-happy">       
         </ion-col>   
@@ -16,7 +16,7 @@
         </ion-col> 
         <ion-col *ngIf="player_1_status == 5"col-2 class="p-1-icon-shocked">         
         </ion-col>     
-        <ion-col *ngIf="player_2_status == 'undefined'"col-2 class="p-2-icon">       
+        <ion-col *ngIf="player_2_status == 'undefined'  || player_2_status==null"col-2 class="p-2-icon">       
         </ion-col>    
         <ion-col *ngIf="player_2_status == 0"col-2 class="p-2-icon-happy">       
         </ion-col>   
@@ -30,7 +30,7 @@
         </ion-col> 
         <ion-col *ngIf="player_2_status == 5"col-2 class="p-2-icon-shocked">         
         </ion-col>     
-        <ion-col *ngIf="player_3_status == 'undefined'"col-2 class="p-3-icon">       
+        <ion-col *ngIf="player_3_status == 'undefined'  || player_3_status==null"col-2 class="p-3-icon">       
         </ion-col>    
         <ion-col *ngIf="player_3_status == 0"col-2 class="p-3-icon-happy">       
         </ion-col>   
@@ -44,7 +44,7 @@
         </ion-col> 
         <ion-col *ngIf="player_3_status== 5"col-2 class="p-3-icon-shocked">         
         </ion-col>     
-        <ion-col *ngIf="player_4_status == 'undefined'"col-2 class="p-4-icon">       
+        <ion-col *ngIf="player_4_status == 'undefined'  || player_4_status==null"col-2 class="p-4-icon">       
         </ion-col>    
         <ion-col *ngIf="player_4_status == 0"col-2 class="p-4-icon-happy">       
         </ion-col>   
@@ -78,7 +78,7 @@
           <button ion-button full class="generate-tricks-button-3" *ngIf="count_tricks==2" (click)="changeTrick()"></button>   
       </ion-row> 
       <ion-row>
-          <button ion-button full class="generate-tricks-button-4" *ngIf="count_tricks==3" [disabled]="true"></button>   
+          <button ion-button full class="generate-tricks-button-4" *ngIf="count_tricks==3"  [disabled]="true" ></button>   
       </ion-row> 
       <button ion-button full (click)="startTurn()" *ngIf="count_tricks!=0" class="set-trick"></button>  
     </ion-grid>

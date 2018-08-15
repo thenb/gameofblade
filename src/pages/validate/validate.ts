@@ -43,8 +43,7 @@ export class ValidatePage {
     this.actual_player = window.localStorage.getItem('actual_player'); 
     this.players_count = this.players.length;
     this.player_turn = this.players[this.actual_player];   
-    alert(this.actual_player);
-   
+     
   }
 
   failTrick() {

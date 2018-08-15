@@ -1,14 +1,13 @@
-<ion-content>
-  <ion-row>
-    <ion-label center>{{msg_victory}} Wins</ion-label> 
-  </ion-row>
-  <ion-row>
-    <ion-label center>The Game Of Blade</ion-label> 
-  </ion-row>
-  <ion-row> 
-    <ion-label center>=]</ion-label>
-  </ion-row> 
-  <button ion-button secondary full>Share Result</button>   
-  <button ion-button secondary full (click)="newGame()">Play Again</button>   
+<ion-content padding class="backgroundImage">  
+  <ion-grid>
+    <ion-row class="logo-gameover">
+    </ion-row> 
+    <ion-row>
+      <ion-label text-center class="winner-label">{{msg_victory}} Wins</ion-label> 
+    </ion-row>           
+    <ion-row class="padding-botton">  
+      <button ion-button full (click)="newGame()" class="startgame"></button>     
+      <button ion-button full  class="share" ></button>        
+    </ion-row>       
+  </ion-grid>
 </ion-content>
-
