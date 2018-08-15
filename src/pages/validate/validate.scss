@@ -191,10 +191,25 @@
 }
 
 
+.turn-trick-capsule{
+    height: 40vh;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    color: white;
+    bottom: 0;
+}
+
 .turn-trick{
-    font-size: 30px;
+    font-size: 22px;
     font-family: Bangers;
     color: white;
-    font-weight: bold;
-    height: 350px;
+    text-align: center;
+    width: 100%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 60%;
 }
