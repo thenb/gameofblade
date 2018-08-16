@@ -36,17 +36,28 @@
 }
 
 .back{
-    background: url('../../assets/icons/arrow-left.png') no-repeat center center fixed;
+    background: url('../../assets/buttons/backBtn.png') no-repeat center center fixed;
     position: fixed;
     left: 0;
     bottom: 10px;
-    right: 0;
+    right: 10;
     height: 50px;
     opacity:1;   
 }
 
 .selected{
     opacity: 1;   
+}
+
+.set-difficult-label{
+    font-size: 32px;
+    color: white;
+    padding-top:20px;
+}
+
+.padding-top-bottom-20{
+    padding-top:20px;
+    padding-bottom: 20px;
 }
 
 

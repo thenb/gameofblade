@@ -62,22 +62,22 @@
       <ion-row text-center *ngIf="count_tricks==0" class="padding-25 instructions-below-label">  
         Choose the trick for Round {{turn}}. The trick can be changed 2 times per round.
       </ion-row>        
-      <ion-row text-center *ngIf="count_tricks==0">  
-        <ion-label class="tab-below-label">Tap for trick</ion-label>       
+      <ion-row text-center *ngIf="count_tricks==0" class="padding-20">  
+        <ion-label class="tab-below-label-tricks">Tap for trick</ion-label>       
       </ion-row>  
-      <ion-row text-center *ngIf="count_tricks!=0" class="padding-50">  
-        <ion-label class="tab-below-label">{{trick}}</ion-label>       
+      <ion-row text-center *ngIf="count_tricks!=0" class="padding-65">  
+        <ion-label class="trick-tab-below-label">{{trick}}</ion-label>       
       </ion-row>  
-      <ion-row>
+      <ion-row >
           <button ion-button full class="generate-tricks-button-1" *ngIf="count_tricks==0" (click)="changeTrick()"></button>   
       </ion-row>   
-      <ion-row>
+      <ion-row >
           <button ion-button full class="generate-tricks-button-2" *ngIf="count_tricks==1" (click)="changeTrick()"></button>   
       </ion-row> 
-      <ion-row>
+      <ion-row >
           <button ion-button full class="generate-tricks-button-3" *ngIf="count_tricks==2" (click)="changeTrick()"></button>   
       </ion-row> 
-      <ion-row>
+      <ion-row >
           <button ion-button full class="generate-tricks-button-4" *ngIf="count_tricks==3"  [disabled]="true" ></button>   
       </ion-row> 
       <button ion-button full (click)="startTurn()" *ngIf="count_tricks!=0" class="set-trick"></button>  

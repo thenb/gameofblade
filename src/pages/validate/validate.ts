@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { FailPage } from '../fail/fail';
+import { GotitPage } from '../gotit/gotit';
 import { GameoverPage } from '../gameover/gameover';
 import { TurnsPage } from '../turns/turns';
 import { TricksPage } from '../tricks/tricks';
@@ -27,8 +28,10 @@ export class ValidatePage {
   private players_count: any;
   private actual_player: any;
   private player_turn : any;
+  private returning: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {    
+   
     this.trick = window.localStorage.getItem('trick');
     this.player_1_name = window.localStorage.getItem('player_1_name');    
     this.player_1_status = window.localStorage.getItem('player_1_status');
@@ -71,9 +74,11 @@ export class ValidatePage {
     }   
     window.localStorage.setItem('players', JSON.stringify(this.players));  
     window.localStorage.setItem('actual_player', this.actual_player);
-    this.nextPlayer()
-
-  }
+    this.navCtrl.push(FailPage,
+      {         
+          callback: this.getData
+      });
+  }  
 
  gotTrick() {
   if(this.actual_player<=this.players_count){
@@ -82,8 +87,18 @@ export class ValidatePage {
     this.actual_player=0;
   }   
   window.localStorage.setItem('actual_player', this.actual_player);  
-  this.nextPlayer()
+  this.navCtrl.push(GotitPage,
+    {         
+        callback: this.getData
+    });
  }
+
+ getData = data =>
+  {
+    return new Promise((resolve, reject) => {
+    this.nextPlayer();
+    });
+  };
 
   nextPlayer() {
     //se acabou o ultimo jogador do turno
@@ -128,4 +143,6 @@ export class ValidatePage {
       return true;
     }
   } 
+
+  
 }

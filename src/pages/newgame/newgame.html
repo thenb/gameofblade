@@ -14,7 +14,7 @@
           <ion-col *ngIf="player_1_name != ''"col-2 offset-1 class="player-1-icon-happy">               
           </ion-col> 
           <ion-col col-7 offset-1 class="button-border-blue">
-              <ion-input type="text" placeholder="Player 1" [(ngModel)]="player_1_name"></ion-input>
+              <ion-input type="text" placeholder="Player 1" [(ngModel)]="player_1_name" class="text-input"></ion-input>
           </ion-col>        
       </ion-row>
       <ion-row class="padding-10">            
@@ -23,7 +23,7 @@
           <ion-col *ngIf="player_2_name != ''"col-2 offset-1 class="player-2-icon-happy">               
           </ion-col> 
           <ion-col col-7 offset-1 class="button-border-green">
-              <ion-input type="text" placeholder="Player 2" [(ngModel)]="player_2_name"></ion-input>
+              <ion-input type="text" placeholder="Player 2" [(ngModel)]="player_2_name" class="text-input"></ion-input>
           </ion-col>        
       </ion-row> 
       <ion-row class="padding-10">               
@@ -32,7 +32,7 @@
           <ion-col *ngIf="player_3_name != ''"col-2 offset-1 class="player-3-icon-happy">               
           </ion-col> 
           <ion-col col-7 offset-1 class="button-border-orange">
-              <ion-input type="text" placeholder="Player 3" [(ngModel)]="player_3_name"></ion-input>
+              <ion-input type="text" placeholder="Player 3" [(ngModel)]="player_3_name" class="text-input"></ion-input>
           </ion-col>        
       </ion-row> 
       <ion-row class="padding-10">         
@@ -41,11 +41,11 @@
           <ion-col *ngIf="player_4_name != ''"col-2 offset-1 class="player-4-icon-happy">               
           </ion-col> 
           <ion-col col-7 offset-1 class="button-border-pink">
-              <ion-input type="text" placeholder="Player 4" [(ngModel)]="player_4_name"></ion-input>
+              <ion-input type="text" placeholder="Player 4" [(ngModel)]="player_4_name" class="text-input"></ion-input>
           </ion-col>        
       </ion-row>
       <ion-row>            
-        <ion-col col-6 offset-6 class="next" (click)="startTrick()"> 
+        <ion-col col-6 offset-6 class="next" *ngIf="player_1_name != '' || player_2_name != '' || player_3_name != '' || player_4_name != ''" (click)="startTrick()"> 
         </ion-col>                
       </ion-row> 
     </ion-grid> 

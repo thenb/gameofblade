@@ -9,17 +9,20 @@
 }
 
 .add-players-label{
-    font-size: 22px;
+    font-size: 32px;
     color: white;
+    font-family: Bangers;
     padding-top:20px;
+    font-weight: bold;
 }
 
 .tab-below-label{
-    font-size: 30px;
+    font-size: 20px;
     font-family: Bangers;
     color: white;
-    font-weight: bold;
 }
+
+
 
 .player-1-icon{
     background: url('../../assets/emoji/48x48/@1x/blue/zzz.png') no-repeat center center fixed;
@@ -170,23 +173,23 @@
 }
 
 .player-2-icon-pleased-2x{
-    background: url('../../assets/emoji/48x48/@2x/blue/pleased@2x.png') no-repeat center center fixed;
+    background: url('../../assets/emoji/48x48/@2x/green/pleased@2x.png') no-repeat center center fixed;
 }
 
 .player-2-icon-flushed-2x{
-    background: url('../../assets/emoji/48x48/@2x/blue/flushed@2x.png') no-repeat center center fixed;
+    background: url('../../assets/emoji/48x48/@2x/green/flushed@2x.png') no-repeat center center fixed;
 }
 
 .player-2-icon-scared-2x{
-    background: url('../../assets/emoji/48x48/@2x/blue/scared@2x.png') no-repeat center center fixed;
+    background: url('../../assets/emoji/48x48/@2x/green/scared@2x.png') no-repeat center center fixed;
 }
 
 .player-2-icon-cry-2x{
-    background: url('../../assets/emoji/48x48/@2x/blue/cry@2x.png') no-repeat center center fixed;
+    background: url('../../assets/emoji/48x48/@2x/green/cry@2x.png') no-repeat center center fixed;
 }
 
 .player-2-icon-shocked-2x{
-    background: url('../../assets/emoji/48x48/@2x/blue/shocked@2x.png') no-repeat center center fixed;
+    background: url('../../assets/emoji/48x48/@2x/green/shocked@2x.png') no-repeat center center fixed;
 }
 
 .player-3-icon-2x{
@@ -198,23 +201,23 @@
 }
 
 .player-3-icon-pleased-2x{
-    background: url('../../assets/emoji/48x48/@2x/blue/pleased@2x.png') no-repeat center center fixed;
+    background: url('../../assets/emoji/48x48/@2x/yellow/pleased@2x.png') no-repeat center center fixed;
 }
 
 .player-3-icon-flushed-2x{
-    background: url('../../assets/emoji/48x48/@2x/blue/flushed@2x.png') no-repeat center center fixed;
+    background: url('../../assets/emoji/48x48/@2x/yellow/flushed@2x.png') no-repeat center center fixed;
 }
 
 .player-3-icon-scared-2x{
-    background: url('../../assets/emoji/48x48/@2x/blue/scared@2x.png') no-repeat center center fixed;
+    background: url('../../assets/emoji/48x48/@2x/yellow/scared@2x.png') no-repeat center center fixed;
 }
 
 .player-3-icon-cry-2x{
-    background: url('../../assets/emoji/48x48/@2x/blue/cry@2x.png') no-repeat center center fixed;
+    background: url('../../assets/emoji/48x48/@2x/yellow/cry@2x.png') no-repeat center center fixed;
 }
 
 .player-3-icon-shocked-2x{
-    background: url('../../assets/emoji/48x48/@2x/blue/shocked@2x.png') no-repeat center center fixed;
+    background: url('../../assets/emoji/48x48/@2x/yellow/shocked@2x.png') no-repeat center center fixed;
 }
 
 .player-4-icon-2x{
@@ -276,6 +279,24 @@
     bottom: 10px;
     right: 0;
     height: 50px;
+}
+
+.text-input{
+    color :white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-input::-moz-placeholder {
+    color: grey;
+}
+  
+.text-input:-ms-input-placeholder {
+    color: grey;
+}
+  
+.text-input::-webkit-input-placeholder {
+    color: grey;
 }
 
 

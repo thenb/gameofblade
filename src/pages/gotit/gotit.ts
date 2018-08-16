@@ -6,15 +6,15 @@ import { NewGamePage } from '../newgame/newgame';
   selector: 'page-gotit',
   templateUrl: 'gotit.html'
 })
-export class GotitPage {  
+export class GotitPage { 
+  
+  private callback : any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {    
+    this.callback = this.navParams.get('callback');
   }
 
   nextTurn() {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.navCtrl.push(NewGamePage);
-  } 
- 
+    this.callback().then( () => { this.navCtrl.pop() });
+  }  
 }

@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Nav, Platform } from 'ionic-angular';
 import { NewGamePage } from '../newgame/newgame';
+import { isNullOrUndefined } from 'util';
 
 @Component({
   selector: 'page-home',
@@ -25,8 +26,14 @@ export class HomePage {
   }
 
   startGame() {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario   
+    window.localStorage.setItem('player_1_name', 'undefined');
+    window.localStorage.setItem('player_1_status', 'undefined');
+    window.localStorage.setItem('player_2_name', 'undefined');
+    window.localStorage.setItem('player_2_status', 'undefined');
+    window.localStorage.setItem('player_3_name', 'undefined');
+    window.localStorage.setItem('player_3_name', 'undefined');
+    window.localStorage.setItem('player_4_name', 'undefined');
+    window.localStorage.setItem('player_4_status', 'undefined');       
     this.navCtrl.push(NewGamePage);
   }
 
