@@ -88,9 +88,9 @@ export class ValidatePage {
   nextPlayer() {
     //se acabou o ultimo jogador do turno
     if(this.actual_player<this.players_count){
-    //enquato nao acaba o turno
-    this.player_turn = this.players[this.actual_player];
-    this.navCtrl.push(TurnsPage) 
+      //enquato nao acaba o turno
+      this.player_turn = this.players[this.actual_player];
+      this.navCtrl.push(TurnsPage) 
     }else{
       if(this.checkWinner()){
         this.navCtrl.push(GameoverPage)
@@ -107,15 +107,20 @@ export class ValidatePage {
   checkWinner() {
     let player = 0;
     let msg_victory = "";
-    this.players.forEach(p => {      
-      if(p.status != 5){
+    this.players.forEach(p => {     
+      //Se status menor que 5, jogador ainda está no jogo 
+      if(p.status < 5){
         player++;        
         msg_victory = msg_victory.concat( ' '+p.name+' '); 
       }
     });    
+
+    //Se numero de players no jogo é 0, quer dizer que ninguem ganhou
     if(player==0){
       msg_victory= 'Nobody';        
     }
+    
+    // Se foi maior que 1, ainda tem mais rodadas, caso seja 1, tem um vencedor
     if(player > 1){       
       return false;
     }else{

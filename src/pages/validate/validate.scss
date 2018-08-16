@@ -7,33 +7,34 @@
     padding-top:0px;
 }
 
+
 .status-0{
-    background: url('../../assets/ui/blade-0.png') no-repeat center center fixed;
+    background: url('../../assets/ui/small-blade-0.png') no-repeat center center fixed;
     height: 70px;
 }
 
 .status-1{
-    background: url('../../assets/ui/blade-1.png') no-repeat center center fixed;
+    background: url('../../assets/ui/small-blade-1.png') no-repeat center center fixed;
     height: 70px;
 }
 
 .status-2{
-    background: url('../../assets/ui/blade-2.png') no-repeat center center fixed;
+    background: url('../../assets/ui/small-blade-2.png') no-repeat center center fixed;
     height: 70px;
 }
 
 .status-3{
-    background: url('../../assets/ui/blade-3.png') no-repeat center center fixed;
+    background: url('../../assets/ui/small-blade-3.png') no-repeat center center fixed;
     height: 70px;
 }
 
 .status-4{
-    background: url('../../assets/ui/blade-4.png') no-repeat center center fixed;
+    background: url('../../assets/ui/small-blade-4.png') no-repeat center center fixed;
     height: 70px;
 }
 
 .status-5{
-    background: url('../../assets/ui/blade-5.png') no-repeat center center fixed;
+    background: url('../../assets/ui/small-blade-5.png') no-repeat center center fixed;
     height: 70px;
 }
 
@@ -49,17 +50,17 @@
 
 
 .turn-trick-capsule{
-    height: 40vh;
+    height: 45vh;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    color: white;
+    background: rgba($color: #800080, $alpha: 0.2);
     bottom: 0;
 }
 
 .turn-trick{
-    font-size: 22px;
+    font-size: 26px;
     font-family: Bangers;
     color: white;
     text-align: center;
@@ -68,5 +69,28 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    top: 60%;
+    top: 40%;
+    opacity: 1;
+}
+
+.turn-information{
+    font-size: 28px;
+    font-family: Bangers;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 30vh;
+    padding-top: 3vh;
+}
+
+
+.player-name{
+    font-size: 28px;
+    font-family: Bangers;
+    color: white;
+    font-weight: bold;
 }
