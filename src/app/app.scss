@@ -15,12 +15,15 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 @font-face{
-    font-family: Bangers;
+    font-family: "Bangers";
+    font-style: semi-bold;
     src: url(../assets/fonts/FeVQS0BTqb0h60ACH5FQ2Ixi.woff2);
 }
 
-*{
-    font-family: Bangers;
+
+$font-family-base: "Bangers";
+body {
+    font-family: "Bangers" !important;
 }
 
 
