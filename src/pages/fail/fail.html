@@ -1,9 +1,17 @@
-<ion-content (click)="nextturn()">
-  <ion-row>
-    <ion-label center>You Got The Letter</ion-label> 
-  </ion-row>
-  <ion-row> 
-    <ion-label center>B.L.A.D.E</ion-label>
-  </ion-row> 
-</ion-content>
-
+<ion-content  (click)="nextTurn()" class="red-background"> 
+    <ion-grid>
+      <ion-row class="sad" col-10 offset-1>          
+      </ion-row>
+      <ion-row text-center class="padding-top-bottom-20 gotit-name">          
+        {{actual_player.name}}, you get a letter
+      </ion-row>
+      <ion-row center full *ngIf="actual_player.status == 0" class="status-0-gotit"></ion-row>
+      <ion-row center full *ngIf="actual_player.status == 1" class="status-1-gotit"></ion-row>
+      <ion-row center full *ngIf="actual_player.status == 2" class="status-2-gotit"></ion-row>
+      <ion-row center full *ngIf="actual_player.status == 3" class="status-3-gotit"></ion-row>
+      <ion-row center full *ngIf="actual_player.status == 4" class="status-4-gotit"></ion-row>
+      <ion-row center full *ngIf="actual_player.status == 5" class="status-5-gotit"></ion-row>
+    </ion-grid>      
+  </ion-content>
+    
+  

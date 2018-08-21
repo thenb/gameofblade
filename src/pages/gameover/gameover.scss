@@ -3,6 +3,16 @@
     height: 150px;
 }
 
+.trofeu-winner{
+    background: url('../../assets/icons/trophy.png') no-repeat center center fixed;
+    height: 200px;
+}
+
+.padding-40{
+    padding-top:140px;
+}
+
+
 .winner-label{
     font-size: 40px;
     font-family: Bangers;
@@ -13,3 +23,14 @@
 .backgroundImageGameOver{
     background-image: url('../../assets/ui/pageBg-endOfGame.png');
 }
+
+.share-gameover{
+    background: url('../../assets/buttons/fullwidth-shareResults.png') no-repeat center center fixed;
+    height: 50px;
+}
+
+.go-home{
+    background: url('../../assets/buttons/fullwidth-gotoHomescreen.png') no-repeat center center fixed;
+    height: 50px;
+}
+

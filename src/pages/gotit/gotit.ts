@@ -9,9 +9,11 @@ import { NewGamePage } from '../newgame/newgame';
 export class GotitPage { 
   
   private callback : any;
+  private actual_player: any; 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {    
     this.callback = this.navParams.get('callback');
+    this.actual_player = this.navParams.get('player');
   }
 
   nextTurn() {

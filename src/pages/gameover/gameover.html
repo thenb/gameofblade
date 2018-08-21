@@ -4,10 +4,12 @@
     </ion-row> 
     <ion-row>
       <ion-label text-center class="winner-label">{{msg_victory}} Wins</ion-label> 
-    </ion-row>           
+    </ion-row>  
+    <ion-row class="trofeu-winner padding-40">
+    </ion-row>          
     <ion-row class="padding-botton">  
-      <button ion-button full (click)="newGame()" class="startgame"></button>     
-      <button ion-button full  class="share" ></button>        
+      <button ion-button full  class="share-gameover"></button>        
+      <button ion-button full (click)="newGame()" class="go-home"></button>
     </ion-row>       
   </ion-grid>
 </ion-content>

@@ -76,7 +76,8 @@ export class ValidatePage {
     window.localStorage.setItem('actual_player', this.actual_player);
     this.navCtrl.push(FailPage,
       {         
-          callback: this.getData
+          callback: this.getData,
+          player: this.player_turn
       });
   }  
 
@@ -89,7 +90,8 @@ export class ValidatePage {
   window.localStorage.setItem('actual_player', this.actual_player);  
   this.navCtrl.push(GotitPage,
     {         
-        callback: this.getData
+        callback: this.getData,
+        player: this.player_turn
     });
  }
 

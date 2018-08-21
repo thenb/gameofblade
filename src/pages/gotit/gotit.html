@@ -1,15 +1,16 @@
-<ion-content  (click)="nextTurn()"> 
-    <ion-row>
-      <ion-label center><ion-icon ios="logo-apple" md="logo-android"></ion-icon></ion-label> 
+<ion-content  (click)="nextTurn()" class="green-background"> 
+  <ion-grid>
+    <ion-row class="happy" col-10 offset-1>          
     </ion-row>
-    <ion-row> 
-      <ion-label center>Good Job</ion-label>
-    </ion-row> 
-    <ion-row>
-      <ion-col col-6>
-        <button ion-button secondary full (click)="nextTurn()">Got It</button>  
-      </ion-col>
+    <ion-row text-center class="padding-top-bottom-20">          
+      <ion-label class="gotit-name">Good Job, {{actual_player.name}}!</ion-label>
     </ion-row>
-  </ion-content>
-  
+    <ion-row center full *ngIf="actual_player.status == 0" class="status-0-gotit"></ion-row>
+    <ion-row center full *ngIf="actual_player.status == 1" class="status-1-gotit"></ion-row>
+    <ion-row center full *ngIf="actual_player.status == 2" class="status-2-gotit"></ion-row>
+    <ion-row center full *ngIf="actual_player.status == 3" class="status-3-gotit"></ion-row>
+    <ion-row center full *ngIf="actual_player.status == 4" class="status-4-gotit"></ion-row>
+    <ion-row center full *ngIf="actual_player.status == 5" class="status-5-gotit"></ion-row>
+  </ion-grid>      
+</ion-content>
   
