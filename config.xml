@@ -18,7 +18,8 @@
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="6000" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="SplashScreenDelay" value="30000" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon src="src/assets/icon/app-icon-squircle.png" />
