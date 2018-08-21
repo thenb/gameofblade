@@ -14,7 +14,7 @@
             </ion-col> 
             <ion-col *ngIf="player_1_status == 4"col-2 class="p-1-icon-cry">         
             </ion-col> 
-            <ion-col *ngIf="player_1_status == 5"col-2 class="p-1-icon-shocked">         
+            <ion-col *ngIf="player_1_status >= 5"col-2 class="p-1-icon-shocked">         
             </ion-col>     
             <ion-col *ngIf="player_2_status == 'undefined'  || player_2_status==null"col-2 class="p-2-icon">       
             </ion-col>    
@@ -28,7 +28,7 @@
             </ion-col> 
             <ion-col *ngIf="player_2_status == 4"col-2 class="p-2-icon-cry">         
             </ion-col> 
-            <ion-col *ngIf="player_2_status == 5"col-2 class="p-2-icon-shocked">         
+            <ion-col *ngIf="player_2_status >= 5"col-2 class="p-2-icon-shocked">         
             </ion-col>     
             <ion-col *ngIf="player_3_status == 'undefined'  || player_3_status==null"col-2 class="p-3-icon">       
             </ion-col>    
@@ -42,7 +42,7 @@
             </ion-col> 
             <ion-col *ngIf="player_3_status == 4"col-2 class="p-3-icon-cry">         
             </ion-col> 
-            <ion-col *ngIf="player_3_status== 5"col-2 class="p-3-icon-shocked">         
+            <ion-col *ngIf="player_3_status >= 5"col-2 class="p-3-icon-shocked">         
             </ion-col>     
             <ion-col *ngIf="player_4_status == 'undefined'  || player_4_status==null"col-2 class="p-4-icon">       
             </ion-col>    
@@ -56,7 +56,7 @@
             </ion-col> 
             <ion-col *ngIf="player_4_status == 4"col-2 class="p-4-icon-cry">         
             </ion-col> 
-            <ion-col *ngIf="player_4_status == 5"col-2 class="p-4-icon-shocked">         
+            <ion-col *ngIf="player_4_status >= 5"col-2 class="p-4-icon-shocked">         
             </ion-col> 
         </ion-row>
         <ion-row>  

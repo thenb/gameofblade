@@ -84,8 +84,26 @@ $colors: (
 // Fonts
 // --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
+//@import "roboto";
+//@import "noto-sans";
+
+@font-face{
+  font-family: "Bangers";
+  font-style: semi-bold;
+  src: url(../assets/fonts/bangers/Bangers.ttf);
+}
+
+
+$font-family-base: "Bangers";
+body {
+  font-family: "Bangers" !important;
+  letter-spacing: 2px
+}
+
+h1, h2, button, p, input, label, a{
+  font-family: "Bangers" !important;
+  letter-spacing: 2px
+}
 
 
 $text-input-md-highlight-color: white;

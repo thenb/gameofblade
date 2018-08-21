@@ -74,17 +74,17 @@
 }
 
 .turn-information{
-    font-size: 28px;
-    font-family: Bangers;
-    font-weight: bold;
-    color: white;
-    text-align: center;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     height: 30vh;
+}
+
+.turn-information-name{
     padding-top: 3vh;
+    overflow: hidden;
+    width: 60vh;
 }
 
 
@@ -93,4 +93,8 @@
     font-family: Bangers;
     color: white;
     font-weight: bold;
+    text-align: center;
+    padding-left: 3vh;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
 }

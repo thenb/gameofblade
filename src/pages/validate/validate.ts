@@ -67,31 +67,41 @@ export class ValidatePage {
       this.player_4_status = this.players[this.actual_player].status;
       window.localStorage.setItem('player_4_status', this.player_4_status);
     } 
-    if(this.actual_player<=this.players_count){
+
+    /*if(this.actual_player<=this.players_count){
       this.actual_player++; 
     }else{
       this.actual_player=0;
-    }   
+    }
+    window.localStorage.setItem('actual_player', this.actual_player);*/
     window.localStorage.setItem('players', JSON.stringify(this.players));  
-    window.localStorage.setItem('actual_player', this.actual_player);
+    //window.localStorage.setItem('actual_player', this.actual_player);
     this.navCtrl.push(FailPage,
       {         
+<<<<<<< HEAD
           callback: this.getData,
           player: this.player_turn
+=======
+        "callback": this.getData 
+>>>>>>> 376ac0ada00d03b447a9bb873e1fe3f2fb7bc106
       });
   }  
 
  gotTrick() {
-  if(this.actual_player<=this.players_count){
+  /*if(this.actual_player<=this.players_count){
     this.actual_player++; 
   }else{
     this.actual_player=0;
-  }   
-  window.localStorage.setItem('actual_player', this.actual_player);  
+  } 
+  window.localStorage.setItem('actual_player', this.actual_player);  */
   this.navCtrl.push(GotitPage,
     {         
+<<<<<<< HEAD
         callback: this.getData,
         player: this.player_turn
+=======
+      "callback": this.getData 
+>>>>>>> 376ac0ada00d03b447a9bb873e1fe3f2fb7bc106
     });
  }
 
@@ -103,18 +113,53 @@ export class ValidatePage {
   };
 
   nextPlayer() {
+    this.actual_player++;
+    window.localStorage.setItem('actual_player', this.actual_player);
     //se acabou o ultimo jogador do turno
-    if(this.actual_player<this.players_count){
-      //enquato nao acaba o turno
-      this.player_turn = this.players[this.actual_player];
-      this.navCtrl.push(TurnsPage) 
+    if(this.actual_player <= this.players_count){
+      //Verifica se próximo player ainda está jogando e seleciona o próximo jogador apto a jogar
+      if(this.players[this.actual_player].status >= 5){
+        this.actual_player++;
+        alert("primeiro add: " + this.actual_player );
+        while(this.actual_player <= this.players_count && this.players[this.actual_player].status >= 5){
+          this.actual_player++;
+        }
+        window.localStorage.setItem('actual_player', this.actual_player);
+
+        alert("depois while: " + this.actual_player );
+        if(this.actual_player > this.players_count){
+          if(this.checkWinner()){
+            this.navCtrl.push(GameoverPage)
+          }else{
+            this.getFirstPlayer();
+    
+            this.turn++;
+            window.localStorage.setItem('turn_number', this.turn);
+            window.localStorage.setItem('actual_player', this.actual_player);
+            this.navCtrl.push(TricksPage)
+          }
+        }else{
+          alert("chama turn: " + this.players[this.actual_player].name );
+          //enquato nao acaba o turno
+          this.player_turn = this.players[this.actual_player];
+          this.navCtrl.push(TurnsPage) 
+        }
+
+      }else{
+        //enquato nao acaba o turno
+        this.player_turn = this.players[this.actual_player];
+        this.navCtrl.push(TurnsPage) 
+      }
+
     }else{
       if(this.checkWinner()){
         this.navCtrl.push(GameoverPage)
       }else{
+        this.getFirstPlayer();
+
         this.turn++;
         window.localStorage.setItem('turn_number', this.turn);
-        this.actual_player=0;
+        //this.actual_player = 0;
         window.localStorage.setItem('actual_player', this.actual_player);
         this.navCtrl.push(TricksPage)
       }
@@ -145,6 +190,21 @@ export class ValidatePage {
       return true;
     }
   } 
+
+  //Pega o primeiro 
+  getFirstPlayer(){
+    let validateNextPlayer = false;
+    let count = 0;
+    this.players.forEach(p => {     
+      if(p.status >= 5 && !validateNextPlayer){
+        count++;      
+      }else{
+        validateNextPlayer = true;
+      }
+    }); 
+    this.actual_player = count;
+    
+  }
 
   
 }

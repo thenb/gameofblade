@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Nav, Platform } from 'ionic-angular';
 import { NewGamePage } from '../newgame/newgame';
 import { isNullOrUndefined } from 'util';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @Component({
   selector: 'page-home',
@@ -13,7 +14,8 @@ export class HomePage {
 
   private hasResume : any;
 
-  constructor(public navCtrl: NavController) {
+  
+  constructor(public navCtrl: NavController, private socialSharing: SocialSharing) {
     //if theres something on turn number
     let turn_number = window.localStorage.getItem('turn_number');
     if(!turn_number){ 
@@ -38,7 +40,7 @@ export class HomePage {
   }
 
   resumeGame() {
-    alert("Not Implemeted");
+    this.socialSharing.share("Kiko prega solta \nLinks para borrar a cueca:", "Subject", "http://geradormemes.com/media/created/n2r1vx.jpg", "https://bladelife.tv/ \nhttps://bladelife.tv/");
   }
 
 }

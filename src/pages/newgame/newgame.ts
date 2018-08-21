@@ -34,40 +34,67 @@ export class NewGamePage {
         window.localStorage.setItem('player_1_name', this.player_1_name); 
         this.player_1_status = 0; 
         window.localStorage.setItem('player_1_status', this.player_1_status);
+      } else{
+        //Deve zerar, para garantir que não ficou nenhum lixo
+        window.localStorage.setItem('player_1_name', undefined); 
+        window.localStorage.setItem('player_1_status', undefined);
       } 
+
       if(this.player_2_name != ''){
         window.localStorage.setItem('player_2_name', this.player_2_name);
         this.player_2_status = 0; 
         window.localStorage.setItem('player_2_status', this.player_2_status);
+      }else{
+        window.localStorage.setItem('player_2_name', undefined);
+        window.localStorage.setItem('player_2_status', undefined);
       }     
+
       if(this.player_3_name != ''){
         window.localStorage.setItem('player_3_name', this.player_3_name);
         this.player_3_status = 0; 
         window.localStorage.setItem('player_3_status', this.player_3_status);
-      }     
+      }else{
+        window.localStorage.setItem('player_3_name', undefined);
+        window.localStorage.setItem('player_3_status', undefined);
+      }
+
       if(this.player_4_name != ''){
         window.localStorage.setItem('player_4_name', this.player_4_name);
         this.player_4_status = 0; 
         window.localStorage.setItem('player_4_status', this.player_4_status);
-      }     
+      }else{
+        window.localStorage.setItem('player_4_name', undefined);
+        window.localStorage.setItem('player_4_status', undefined);
+      }   
+
       window.localStorage.setItem('turn_number', '1');  
       this.players = [];
       if(this.player_1_name != 'undefined' && this.player_1_name != '' && this.player_1_name != null){
         this.players[0] = {name:this.player_1_name, status:this.player_1_status, number:0};
         window.localStorage.setItem('player_1', JSON.stringify(this.players[0]));
       }
+
       if(this.player_2_name != 'undefined' && this.player_2_name != '' && this.player_2_name != null){
         this.players[1] = {name:this.player_2_name, status:this.player_2_status, number:1};
         window.localStorage.setItem('player_2', JSON.stringify(this.players[1]));
+      }else{
+
       }
+
       if(this.player_3_name != 'undefined' && this.player_3_name != '' && this.player_3_name != null){
         this.players[2] = {name:this.player_3_name, status:this.player_3_status, number:2};
         window.localStorage.setItem('player_3', JSON.stringify(this.players[2]));
+      }else{
+
       }
+
       if(this.player_4_name != 'undefined' && this.player_4_name != '' && this.player_4_name != null){
         this.players[3]= {name:this.player_4_name, status:this.player_4_status, number:3};
         window.localStorage.setItem('player_4', JSON.stringify(this.players[3]));
+      }else{
+
       }
+
       this.actual_player = 0;
       window.localStorage.setItem('players', JSON.stringify(this.players));
       window.localStorage.setItem('actual_player', this.actual_player);    
