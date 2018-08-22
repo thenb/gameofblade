@@ -78,12 +78,8 @@ export class ValidatePage {
     //window.localStorage.setItem('actual_player', this.actual_player);
     this.navCtrl.push(FailPage,
       {         
-<<<<<<< HEAD
           callback: this.getData,
           player: this.player_turn
-=======
-        "callback": this.getData 
->>>>>>> 376ac0ada00d03b447a9bb873e1fe3f2fb7bc106
       });
   }  
 
@@ -96,19 +92,17 @@ export class ValidatePage {
   window.localStorage.setItem('actual_player', this.actual_player);  */
   this.navCtrl.push(GotitPage,
     {         
-<<<<<<< HEAD
         callback: this.getData,
         player: this.player_turn
-=======
-      "callback": this.getData 
->>>>>>> 376ac0ada00d03b447a9bb873e1fe3f2fb7bc106
     });
  }
 
  getData = data =>
   {
     return new Promise((resolve, reject) => {
-    this.nextPlayer();
+      this.nextPlayer();
+    }).catch(err => {
+      throw new Error(err);
     });
   };
 

@@ -39,8 +39,8 @@ export class HomePage {
     this.navCtrl.push(NewGamePage);
   }
 
-  resumeGame() {
-    this.socialSharing.share("Kiko prega solta \nLinks para borrar a cueca:", "Subject", "http://geradormemes.com/media/created/n2r1vx.jpg", "https://bladelife.tv/ \nhttps://bladelife.tv/");
+  share() {
+    this.socialSharing.share("Text to be shared \nExternal urls:", "Subject", "https://static.findie.me/bladelife/logos/bladelife-logo.png", "https://bladelife.tv/ \nhttps://bladelife.tv/");
   }
 
 }
