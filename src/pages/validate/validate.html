@@ -1,7 +1,7 @@
 <ion-content padding class="backgroundImage">
     <ion-grid>
       <ion-row>   
-        <ion-label class="turn-label" col-3>ROUND {{turn}}</ion-label>     
+        <ion-label class="turn-label bangers" col-3>ROUND {{turn}}</ion-label>     
         <ion-col *ngIf="player_1_status == 'undefined' || player_1_status==null"col-2 class="p-1-icon">       
         </ion-col>    
         <ion-col *ngIf="player_1_status == 0"col-2 class="p-1-icon-happy">       
@@ -104,7 +104,7 @@
           </ion-col>       
       </ion-row>
       <ion-row class="turn-trick-capsule" no-margin>
-        <ion-label center class="turn-trick" >{{trick}}</ion-label>
+        <ion-label center class="turn-trick bangers" >{{trick}}</ion-label>
       </ion-row>
       <ion-row class="padding-botton">           
         <ion-col col-6>

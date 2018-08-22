@@ -1,7 +1,7 @@
 <ion-content padding class="backgroundImage">  
     <ion-grid>
        <ion-row>   
-        <ion-label class="turn-label" col-3>ROUND {{turn}}</ion-label>     
+        <ion-label class="turn-label bangers" col-3>ROUND {{turn}}</ion-label>     
         <ion-col *ngIf="player_1_status == 'undefined' || player_1_status==null"col-2 class="p-1-icon">       
         </ion-col>    
         <ion-col *ngIf="player_1_status == 0"col-2 class="p-1-icon-happy">       
@@ -63,10 +63,10 @@
         Choose the trick for Round {{turn}}. The trick can be changed 2 times per round.
       </ion-row>        
       <ion-row text-center *ngIf="count_tricks==0" class="padding-20">  
-        <ion-label class="tab-below-label-tricks">Tap for trick</ion-label>       
+        <ion-label class="tab-below-label-tricks bangers">Tap for trick</ion-label>       
       </ion-row>  
       <ion-row text-center *ngIf="count_tricks!=0" class="padding-65">  
-        <ion-label class="trick-tab-below-label">{{trick}}</ion-label>       
+        <ion-label class="trick-tab-below-label bangers">{{trick}}</ion-label>       
       </ion-row>  
       <ion-row >
           <button ion-button full class="generate-tricks-button-1" *ngIf="count_tricks==0" (click)="changeTrick()"></button>   

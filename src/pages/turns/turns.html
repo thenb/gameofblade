@@ -1,7 +1,7 @@
 <ion-content padding class="backgroundImage" (click)="startValidate()">  
   <ion-grid>
         <ion-row>   
-            <ion-label class="turn-label" col-3>ROUND {{turn}}</ion-label>     
+            <ion-label class="turn-label bangers" col-3>ROUND {{turn}}</ion-label>     
             <ion-col *ngIf="player_1_status == 'undefined' || player_1_status==null"col-2 class="p-1-icon">       
             </ion-col>    
             <ion-col *ngIf="player_1_status == 0"col-2 class="p-1-icon-happy">       
@@ -85,10 +85,10 @@
             <ion-col *ngIf="this.actual_player == 3 && player_4_status == 4" col-12 class="p34b"></ion-col>
         </ion-row>
         <ion-row text-center>  
-            <ion-label class="player-name-turn">{{player_turn.name}}'s Turn</ion-label> 
+            <ion-label class="player-name-turn bangers">{{player_turn.name}}'s Turn</ion-label> 
         </ion-row>    
         <ion-row text-center>  
-            <ion-label class="tab-to-continue">Tap to continue...</ion-label>       
+            <ion-label class="tab-to-continue bangers">Tap to continue...</ion-label>       
         </ion-row>    
   </ion-grid>
 </ion-content>

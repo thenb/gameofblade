@@ -4,6 +4,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { NewGamePage } from '../newgame/newgame';
 import { isNullOrUndefined } from 'util';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -13,9 +14,12 @@ export class HomePage {
   @ViewChild(Nav) nav: Nav;
 
   private hasResume : any;
+  private backController : boolean;
 
   
-  constructor(public navCtrl: NavController, private socialSharing: SocialSharing) {
+  constructor(public navCtrl: NavController, private socialSharing: SocialSharing, platform: Platform, private alertCtrl: AlertController) {
+    this.backController = true;
+
     //if theres something on turn number
     let turn_number = window.localStorage.getItem('turn_number');
     if(!turn_number){ 
@@ -25,6 +29,40 @@ export class HomePage {
     if(+turn_number!=0){ 
       this.hasResume=true;     
     } 
+
+    platform.registerBackButtonAction(() => {
+      this.presentConfirm();
+    },0);
+  }
+
+
+  presentConfirm() {
+    if(this.backController == true){
+      this.backController = false;
+      let alert = this.alertCtrl.create({
+        title: 'Go Home',
+        message: 'Do you want to quit the game?',
+        buttons: [
+          {
+            text: 'No',
+            role: 'cancel',
+            handler: () => {
+              this.backController = true;
+            }
+          },
+          {
+            text: 'Yes',
+            handler: () => {
+              this.backController = true;
+              this.navCtrl.popToRoot();
+            }
+          }
+        ]
+      });
+      alert.present();
+    }
+
+    
   }
 
   startGame() {
