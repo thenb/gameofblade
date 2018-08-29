@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { LoadingPage } from '../loading-game/loading-game';
 import { ToastController } from 'ionic-angular';
 import { CONTENT } from '../../assets/content/content';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { AnalyticsDirective } from '../../directives/analytics/analytics';
 
 @Component({
   selector: 'page-difficult',
@@ -13,9 +15,10 @@ export class DifficultPage {
   private level: string;  
   private player_status: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {    
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, private ga: AnalyticsDirective) {    
     this.level = 'easy';  
     window.localStorage.setItem('level',this.level);   
+    this.ga.call('Dificult');
   }
 
   startTrick() {    

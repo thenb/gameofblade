@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { AnalyticsDirective } from '../../directives/analytics/analytics';
 
 @Component({
   selector: 'page-gameover',
@@ -10,8 +11,9 @@ export class GameoverPage {
 
   private msg_victory: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing) {    
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing, private ga: AnalyticsDirective) {    
     this.msg_victory = window.localStorage.getItem('msg_victory');
+    this.ga.call('Fail');
   }
 
   newGame() {    

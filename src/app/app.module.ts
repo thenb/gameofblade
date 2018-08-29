@@ -17,6 +17,8 @@ import { ValidatePage } from '../pages/validate/validate';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { AnalyticsDirective } from '../directives/analytics/analytics';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     GameoverPage,
     DifficultPage,
     LoadingPage,
-    ValidatePage
+    ValidatePage,
+    AnalyticsDirective
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,9 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     StatusBar,
     SplashScreen,
     SocialSharing,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    GoogleAnalytics,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AnalyticsDirective
   ]
 })
 export class AppModule {}

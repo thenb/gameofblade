@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TurnsPage } from '../turns/turns';
 import { CONTENT } from '../../assets/content/content';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { AnalyticsDirective } from '../../directives/analytics/analytics';
 
 @Component({
   selector: 'page-tricks',
@@ -23,7 +25,7 @@ export class TricksPage {
   private turn : any;
   private count_tricks : number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {    
+  constructor(public navCtrl: NavController, public navParams: NavParams, private ga: AnalyticsDirective) {    
     this.trick = '';
     this.count_tricks = 0;   
     this.level = window.localStorage.getItem('level');  
@@ -43,6 +45,7 @@ export class TricksPage {
     this.player_4_name = window.localStorage.getItem('player_4_name');
     this.player_4_status = window.localStorage.getItem('player_4_status');
     this.turn = window.localStorage.getItem('turn_number');  
+    this.ga.call('Trick');
   }
 
   startTurn() {
@@ -51,6 +54,7 @@ export class TricksPage {
     window.localStorage.setItem('trick', this.trick);   
     this.navCtrl.push(TurnsPage);
     this.count_tricks = 0;
+    this.ga.call('StartTurn');
   }
 
   cancelGame() {
@@ -60,6 +64,7 @@ export class TricksPage {
   }
 
   changeTrick() {
+    this.ga.call('ChangeTrick');
     if(this.trick_list.length == 1){
       if(this.level == 'easy'){
         this.trick_list = Object.assign([], CONTENT.easy_tricks);

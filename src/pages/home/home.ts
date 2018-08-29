@@ -5,6 +5,7 @@ import { NewGamePage } from '../newgame/newgame';
 import { isNullOrUndefined } from 'util';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { AlertController } from 'ionic-angular';
+import { AnalyticsDirective } from '../../directives/analytics/analytics';
 
 @Component({
   selector: 'page-home',
@@ -17,7 +18,7 @@ export class HomePage {
   private backController : boolean;
 
   
-  constructor(public navCtrl: NavController, private socialSharing: SocialSharing, platform: Platform, private alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, private socialSharing: SocialSharing, platform: Platform, private alertCtrl: AlertController, private ga: AnalyticsDirective) {
     this.backController = true;
 
     //if theres something on turn number
@@ -35,6 +36,9 @@ export class HomePage {
     },0);
   }
 
+  ionViewDidLoad() {
+    this.ga.call('Home');
+  }
 
   presentConfirm() {
     if(this.backController == true){
