@@ -110,12 +110,12 @@ export class ValidatePage {
     this.actual_player++;
     window.localStorage.setItem('actual_player', this.actual_player);
     //se acabou o ultimo jogador do turno
-    if(this.actual_player <= this.players_count){
+    if(this.actual_player <= this.players_count && this.players[this.actual_player] != undefined  && this.players[this.actual_player] != null){
       //Verifica se próximo player ainda está jogando e seleciona o próximo jogador apto a jogar
       if(this.players[this.actual_player].status >= 5){
         this.actual_player++;
         alert("primeiro add: " + this.actual_player );
-        while(this.actual_player <= this.players_count && this.players[this.actual_player].status >= 5){
+        while(this.actual_player <= this.players_count && this.players[this.actual_player] != undefined  && this.players[this.actual_player] != null && this.players[this.actual_player].status >= 5){
           this.actual_player++;
         }
         window.localStorage.setItem('actual_player', this.actual_player);
