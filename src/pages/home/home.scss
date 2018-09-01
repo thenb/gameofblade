@@ -3,7 +3,7 @@
 }
 
 .logo{
-    background: url('../../assets/logo/logo-big-bltv.png') no-repeat center center fixed;
+    background: url('../../assets/logo/logo-big-bltv.png') no-repeat center center;
     height: 60vh;
 }
 
@@ -18,12 +18,11 @@
 }
 
 .how{
-    background: url('../../assets/buttons/fullwidth-howtoBtn.png') no-repeat center center fixed;
+    background: url('../../assets/buttons/fullwidth-howtoBtn.png') no-repeat center center;
     height: 50px;
 }
 
 .padding-botton{
-    position: fixed;
     left: 0;
     bottom: 10px;
     right: 0;
