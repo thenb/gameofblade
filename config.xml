@@ -68,15 +68,14 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <allow-navigation href="http://192.168.1.103:8100" />
-    <allow-navigation href="http://192.168.1.105:8100" />
-    <allow-navigation href="http://192.168.1.104:8100" />
-    <allow-navigation href="http://192.168.1.106:8100" />
+    <allow-navigation href="*" />
+    <allow-navigation href="gap://ready" />
     <plugin name="cordova-plugin-x-socialsharing" spec="~5.4.1" />
     <plugin name="cordova-plugin-google-analytics" spec="^1.8.6">
         <variable name="GMS_VERSION" value="11.0.1" />
     </plugin>
+    <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <engine name="browser" spec="5.0.3" />
-    <engine name="ios" spec="4.5.5" />
     <engine name="android" spec="7.0.0" />
+    <engine name="ios" spec="4.5.5" />
 </widget>
