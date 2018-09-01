@@ -88,8 +88,8 @@
         <variable name="GMS_VERSION" value="11.0.1" />
     </plugin>
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
+    <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <engine name="browser" spec="5.0.3" />
     <engine name="android" spec="7.0.0" />
-    <engine name="ios" spec="~4.5.5" />
-    <plugin name="cordova-plugin-file" spec="^6.0.1" />
+    <engine name="ios" spec="4.5.5" />
 </widget>
