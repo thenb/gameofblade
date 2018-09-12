@@ -174,5 +174,12 @@ body {
 
 .game-of-blade{
     background: url('../../assets/logo/logo-small.png') no-repeat center center;
-    height: 50px;   
+    height: 50px;
+    border-bottom: 1px solid white;    
 }
+
+ion-img {
+
+    background: transparent !important;
+}
+
