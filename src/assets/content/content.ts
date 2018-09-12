@@ -1,6 +1,6 @@
 export let CONTENT = { //PLEASE UPDATE THE FOLLOWING VALUES WITH YOURS ONES
     NewGame:{
-        erroCampoObrigatorio: "At least 2 playes"
+        erroCampoObrigatorio: "At least 2 players"
     },
 
     easy_tricks : [
