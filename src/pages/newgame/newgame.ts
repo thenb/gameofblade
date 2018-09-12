@@ -23,8 +23,8 @@ export class NewGamePage {
   private actual_player: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, private ga: AnalyticsDirective) {    
-    this.player_1_name = 'Francisco';
-    this.player_2_name = 'Pedro';
+    this.player_1_name = '';
+    this.player_2_name = '';
     this.player_3_name = '';
     this.player_4_name = ''; 
     this.ga.call('NewGame');
