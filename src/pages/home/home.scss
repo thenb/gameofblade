@@ -1,25 +1,28 @@
 .backgroundImage{
-    background-image: url('../../assets/ui/pageBg.png');
+    background-image: url('../../assets/ui/pageBg@2x.png');
 }
 
-.logo{
-    background: url('../../assets/logo/logo-big-bltv.png') no-repeat center center;
+.logo-row{
     height: 60vh;
 }
 
+
 .startgame{
-    background: url('../../assets/buttons/fullwidth-startBtn.png') no-repeat center center;
+    background: url('../../assets/buttons/fullwidth-startBtn@2x.png') no-repeat center center;
+    background-size: 100%;
     height: 50px;
 }
 
 .share{
-    background: url('../../assets/buttons/fullwidth-shareBtn.png') no-repeat center center;
+    background: url('../../assets/buttons/fullwidth-shareBtn@2x.png') no-repeat center center;
+    background-size: 100%;
     height: 50px;
 }
 
 .how{
-    background: url('../../assets/buttons/fullwidth-howtoBtn.png') no-repeat center center;
+    background: url('../../assets/buttons/fullwidth-howtoBtn@2x.png') no-repeat center center;
     height: 50px;
+    width: 100%;
 }
 
 .padding-botton{
