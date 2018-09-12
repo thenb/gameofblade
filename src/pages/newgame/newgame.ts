@@ -148,7 +148,8 @@ export class NewGamePage {
     let toast = this.toastCtrl.create({
       message: JSON.stringify(data),
       duration: 3000,
-      position: 'top'
+      position: 'top',
+      cssClass: 'toastCenter'
     });
 
     toast.onDidDismiss(() => {
