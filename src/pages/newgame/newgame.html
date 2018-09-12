@@ -3,17 +3,17 @@
       <ion-row class="game-of-blade">          
       </ion-row>
       <ion-row text-center>  
-        <ion-label class="add-players-label bangers">ADD PLAYERS</ion-label>       
+        <ion-label class="add-players-label bangers">WHO'S PLAYING?</ion-label>       
       </ion-row>
       <ion-row text-center>  
-        <ion-label class="tab-below-label bangers">Tap below to add</ion-label>       
+        <ion-label class="tab-below-label bangers"></ion-label>       
       </ion-row>        
       <ion-row class="padding-10">           
           <ion-col *ngIf="player_1_name == ''"col-2 offset-1 class="player-1-icon">              
           </ion-col>  
           <ion-col *ngIf="player_1_name != ''"col-2 offset-1 class="player-1-icon-happy">               
           </ion-col> 
-          <ion-col col-7 offset-1 class="button-border-blue">
+          <ion-col col-7 class="button-border-blue">
               <ion-input type="text" placeholder="Player 1" [(ngModel)]="player_1_name" class="text-input"></ion-input>
           </ion-col>        
       </ion-row>
@@ -22,7 +22,7 @@
           </ion-col>  
           <ion-col *ngIf="player_2_name != ''"col-2 offset-1 class="player-2-icon-happy">               
           </ion-col> 
-          <ion-col col-7 offset-1 class="button-border-green">
+          <ion-col col-7 class="button-border-green">
               <ion-input type="text" placeholder="Player 2" [(ngModel)]="player_2_name" class="text-input"></ion-input>
           </ion-col>        
       </ion-row> 
@@ -31,7 +31,7 @@
           </ion-col>  
           <ion-col *ngIf="player_3_name != ''"col-2 offset-1 class="player-3-icon-happy">               
           </ion-col> 
-          <ion-col col-7 offset-1 class="button-border-orange">
+          <ion-col col-7 class="button-border-orange">
               <ion-input type="text" placeholder="Player 3" [(ngModel)]="player_3_name" class="text-input"></ion-input>
           </ion-col>        
       </ion-row> 
@@ -40,7 +40,7 @@
           </ion-col>  
           <ion-col *ngIf="player_4_name != ''"col-2 offset-1 class="player-4-icon-happy">               
           </ion-col> 
-          <ion-col col-7 offset-1 class="button-border-pink">
+          <ion-col col-7 class="button-border-pink">
               <ion-input type="text" placeholder="Player 4" [(ngModel)]="player_4_name" class="text-input"></ion-input>
           </ion-col>        
       </ion-row>

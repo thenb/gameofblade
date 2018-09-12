@@ -66,16 +66,11 @@ export class ValidatePage {
     if(this.players[this.actual_player].number==3){
       this.player_4_status = this.players[this.actual_player].status;
       window.localStorage.setItem('player_4_status', this.player_4_status);
+
     } 
 
-    /*if(this.actual_player<=this.players_count){
-      this.actual_player++; 
-    }else{
-      this.actual_player=0;
-    }
-    window.localStorage.setItem('actual_player', this.actual_player);*/
     window.localStorage.setItem('players', JSON.stringify(this.players));  
-    //window.localStorage.setItem('actual_player', this.actual_player);
+
     this.navCtrl.push(FailPage,
       {         
           callback: this.getData,
@@ -83,13 +78,7 @@ export class ValidatePage {
       });
   }  
 
- gotTrick() {
-  /*if(this.actual_player<=this.players_count){
-    this.actual_player++; 
-  }else{
-    this.actual_player=0;
-  } 
-  window.localStorage.setItem('actual_player', this.actual_player);  */
+ gotTrick() {  
   this.navCtrl.push(GotitPage,
     {         
         callback: this.getData,
@@ -153,7 +142,6 @@ export class ValidatePage {
 
         this.turn++;
         window.localStorage.setItem('turn_number', this.turn);
-        //this.actual_player = 0;
         window.localStorage.setItem('actual_player', this.actual_player);
         this.navCtrl.push(TricksPage)
       }
