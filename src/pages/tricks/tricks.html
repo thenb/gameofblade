@@ -85,16 +85,16 @@
         <ion-label class="trick-tab-below-label bangers">{{trick}}</ion-label>       
       </ion-row>  
       <ion-row >
-          <button ion-button full class="generate-tricks-button-1" *ngIf="count_tricks==0" (click)="changeTrick()"></button>   
+          <button ion-button class="generate-tricks-button-1" *ngIf="count_tricks==0" (click)="changeTrick()"></button>   
       </ion-row>   
       <ion-row >
-          <button ion-button full class="generate-tricks-button-2" *ngIf="count_tricks==1" (click)="changeTrick()"></button>   
+          <button ion-button class="generate-tricks-button-2" *ngIf="count_tricks==1" (click)="changeTrick()"></button>   
       </ion-row> 
       <ion-row >
-          <button ion-button full class="generate-tricks-button-3" *ngIf="count_tricks==2" (click)="changeTrick()"></button>   
+          <button ion-button class="generate-tricks-button-3" *ngIf="count_tricks==2" (click)="changeTrick()"></button>   
       </ion-row> 
       <ion-row >
-          <button ion-button full class="generate-tricks-button-4" *ngIf="count_tricks==3"  [disabled]="true" ></button>   
+          <button ion-button class="generate-tricks-button-4" *ngIf="count_tricks==3"  [disabled]="true" ></button>   
       </ion-row> 
       <button ion-button full (click)="startTurn()" *ngIf="count_tricks!=0" class="set-trick"></button>  
     </ion-grid>
