@@ -2,62 +2,86 @@
     <ion-grid>
        <ion-row>   
         <ion-label class="turn-label bangers" col-3>ROUND {{turn}}</ion-label>     
-        <ion-col *ngIf="player_1_status == 0"col-2 class="p-1-icon-happy">       
+        <ion-col *ngIf="player_1_status == 0"col-2 class="container">   
+          <img src="../../assets/emoji/48x48/@1x/blue/happy.png" class="con-playr-top">
         </ion-col>   
-        <ion-col *ngIf="player_1_status == 1"col-2 class="p-1-icon-pleased">         
+        <ion-col *ngIf="player_1_status == 1"col-2 class="container">   
+            <img src="../../assets/emoji/48x48/@1x/blue/pleased.png" class="con-playr-top">      
         </ion-col> 
-        <ion-col *ngIf="player_1_status == 2"col-2 class="p-1-icon-flushed">         
+        <ion-col *ngIf="player_1_status == 2"col-2 class="container">  
+            <img src="../../assets/emoji/48x48/@1x/blue/flushed.png" class="con-playr-top">       
         </ion-col> 
-        <ion-col *ngIf="player_1_status== 3"col-2 class="p-1-icon-scared">         
+        <ion-col *ngIf="player_1_status== 3"col-2 class="container"> 
+            <img src="../../assets/emoji/48x48/@1x/blue/scared.png" class="con-playr-top">        
         </ion-col> 
-        <ion-col *ngIf="player_1_status == 4"col-2 class="p-1-icon-cry">         
+        <ion-col *ngIf="player_1_status == 4"col-2 class="container">     
+            <img src="../../assets/emoji/48x48/@1x/blue/cry.png" class="con-playr-top">    
         </ion-col> 
-        <ion-col *ngIf="player_1_status == 5"col-2 class="p-1-icon-shocked">         
+        <ion-col *ngIf="player_1_status == 5"col-2 class="container">   
+            <img src="../../assets/emoji/48x48/@1x/blue/shocked.png" class="con-playr-top">      
         </ion-col>     
-        <ion-col *ngIf="player_2_status == 0"col-2 class="p-2-icon-happy">       
+        <ion-col *ngIf="player_2_status == 0"col-2 class="container">   
+            <img src="'../../assets/emoji/48x48/@1x/green/happy.png" class="con-playr-top">    
         </ion-col>   
-        <ion-col *ngIf="player_2_status == 1"col-2 class="p-2-icon-pleased">         
+        <ion-col *ngIf="player_2_status == 1"col-2 class="container">    
+            <img src="'../../assets/emoji/48x48/@1x/green/pleased.png" class="con-playr-top">     
         </ion-col> 
-        <ion-col *ngIf="player_2_status == 2"col-2 class="p-2-icon-flushed">         
+        <ion-col *ngIf="player_2_status == 2"col-2 class="container">  
+            <img src="'../../assets/emoji/48x48/@1x/green/flushed.png" class="con-playr-top">       
         </ion-col> 
-        <ion-col *ngIf="player_2_status == 3"col-2 class="p-2-icon-scared">         
+        <ion-col *ngIf="player_2_status == 3"col-2 class="container">  
+            <img src="'../../assets/emoji/48x48/@1x/green/scared.png" class="con-playr-top">        
         </ion-col> 
-        <ion-col *ngIf="player_2_status == 4"col-2 class="p-2-icon-cry">         
+        <ion-col *ngIf="player_2_status == 4"col-2 class="container">    
+            <img src="'../../assets/emoji/48x48/@1x/green/cry.png" class="con-playr-top">     
         </ion-col> 
-        <ion-col *ngIf="player_2_status == 5"col-2 class="p-2-icon-shocked">         
+        <ion-col *ngIf="player_2_status == 5"col-2 class="container">     
+            <img src="'../../assets/emoji/48x48/@1x/green/shocked.png" class="con-playr-top">    
         </ion-col>      
-        <ion-col *ngIf="player_3_status == 0"col-2 class="p-3-icon-happy">       
+        <ion-col *ngIf="player_3_status == 0"col-2 class="container">   
+            <img src="../../assets/emoji/48x48/@1x/yellow/happy.png" class="con-playr-top">    
         </ion-col>   
-        <ion-col *ngIf="player_3_status == 1"col-2 class="p-3-icon-pleased">         
+        <ion-col *ngIf="player_3_status == 1"col-2 class="container">    
+            <img src="../../assets/emoji/48x48/@1x/yellow/pleased.png" class="con-playr-top">     
         </ion-col> 
-        <ion-col *ngIf="player_3_status== 2"col-2 class="p-3-icon-flushed">         
+        <ion-col *ngIf="player_3_status== 2"col-2 class="container">   
+            <img src="../../assets/emoji/48x48/@1x/yellow/flushed.png" class="con-playr-top">      
         </ion-col> 
-        <ion-col *ngIf="player_3_status == 3"col-2 class="p-3-icon-scared">         
+        <ion-col *ngIf="player_3_status == 3"col-2 class="container">   
+            <img src="../../assets/emoji/48x48/@1x/yellow/scared.png" class="con-playr-top">      
         </ion-col> 
-        <ion-col *ngIf="player_3_status == 4"col-2 class="p-3-icon-cry">         
+        <ion-col *ngIf="player_3_status == 4"col-2 class="container">     
+            <img src="../../assets/emoji/48x48/@1x/yellow/cry.png" class="con-playr-top">    
         </ion-col> 
-        <ion-col *ngIf="player_3_status== 5"col-2 class="p-3-icon-shocked">         
+        <ion-col *ngIf="player_3_status== 5"col-2 class="container">   
+            <img src="../../assets/emoji/48x48/@1x/yellow/shocked.png" class="con-playr-top">      
         </ion-col>     
-        <ion-col *ngIf="player_4_status == 0"col-2 class="p-4-icon-happy">       
+        <ion-col *ngIf="player_4_status == 0"col-2 class="container">    
+            <img src="../../assets/emoji/48x48/@1x/red/happy.png" class="con-playr-top">   
         </ion-col>   
-        <ion-col *ngIf="player_4_status == 1"col-2 class="p-4-icon-pleased">         
+        <ion-col *ngIf="player_4_status == 1"col-2 class="container">    
+            <img src="../../assets/emoji/48x48/@1x/red/pleased.png" class="con-playr-top">     
         </ion-col> 
-        <ion-col *ngIf="player_4_status == 2"col-2 class="p-4-icon-flushed">         
+        <ion-col *ngIf="player_4_status == 2"col-2 class="container">    
+            <img src="../../assets/emoji/48x48/@1x/red/flushed.png" class="con-playr-top">     
         </ion-col> 
-        <ion-col *ngIf="player_4_status == 3"col-2 class="p-4-icon-scared">         
+        <ion-col *ngIf="player_4_status == 3"col-2 class="container">     
+            <img src="../../assets/emoji/48x48/@1x/red/scared.png" class="con-playr-top">    
         </ion-col> 
-        <ion-col *ngIf="player_4_status == 4"col-2 class="p-4-icon-cry">         
+        <ion-col *ngIf="player_4_status == 4"col-2 class="container">    
+            <img src="../../assets/emoji/48x48/@1x/red/cry.png" class="con-playr-top">     
         </ion-col> 
-        <ion-col *ngIf="player_4_status == 5"col-2 class="p-4-icon-shocked">         
+        <ion-col *ngIf="player_4_status == 5"col-2 class="container"> 
+            <img src="../../assets/emoji/48x48/@1x/red/shocked.png" class="con-playr-top">        
         </ion-col> 
       </ion-row>
-      <ion-row text-center *ngIf="count_tricks==0" class="padding-25 instructions-below-label">  
-        Set a trick (you can change it 2 times)
+      <ion-row text-center *ngIf="count_tricks==0">  
+        <ion-label class="instructions-below-label bangers">Set a trick (you can change it 2 times)</ion-label>
       </ion-row>        
       <ion-row text-center *ngIf="count_tricks==0" class="padding-20">  
         <ion-label class="tab-below-label-tricks bangers">Tap for trick</ion-label>       
       </ion-row>  
-      <ion-row text-center *ngIf="count_tricks!=0" class="padding-65">  
+      <ion-row text-center *ngIf="count_tricks!=0">  
         <ion-label class="trick-tab-below-label bangers">{{trick}}</ion-label>       
       </ion-row>  
       <ion-row >

@@ -8,21 +8,25 @@
 .generate-tricks-button-1{
     background: url('../../assets/buttons/generate btn.png') no-repeat center center , url('../../assets/buttons/generateBtn-border-1.png') no-repeat center center ;
     height: 300px;
+    bottom: 5px;
 }
 
 .generate-tricks-button-2{
     background: url('../../assets/buttons/generate btn.png') no-repeat center center , url('../../assets/buttons/generateBtn-border-2.png') no-repeat center center ;
     height: 300px;
+    bottom: 5px;
 }
 
 .generate-tricks-button-3{
     background: url('../../assets/buttons/generate btn.png') no-repeat center center , url('../../assets/buttons/generateBtn-border-3.png') no-repeat center center ;
     height: 300px;
+    bottom: 5px;
 }
 
 .generate-tricks-button-4{
     background: url('../../assets/buttons/generateBtn-disabled.png') no-repeat center center , url('../../assets/buttons/generateBtn-border-0.png') no-repeat center center ;
     height: 300px;
+    bottom: 5px;
 }
 
 .set-trick{
@@ -50,14 +54,17 @@
     padding-top: 25px;
 }
 
-.padding-65{
-    padding-top: 67px;
+.padding-40{
+    padding-top: 40px;
 }
 
 .instructions-below-label{
     font-size: 18px;
     font-family: Bangers;
     color: white;
+    font-weight: bold;
+    white-space: normal !important;
+    word-wrap:  normal !important;
 }
 
 .trick-tab-below-label{
@@ -65,9 +72,8 @@
     font-family: Bangers;
     color: white;
     font-weight: bold;
-    word-break: break-all !important;
-    font-weight: bold;
     white-space: normal !important;
+    word-wrap:  normal !important;
 }
 
 .tab-below-label-tricks{
@@ -76,4 +82,10 @@
     color: white;
 }
 
+.icon-playr-top{
+    width: 22px !important;
+}
 
+.container img{
+    width: 30px;
+}
