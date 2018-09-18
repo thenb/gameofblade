@@ -173,9 +173,15 @@ body {
 }
 
 .game-of-blade{
-    background: url('../../assets/logo/logo-small.png') no-repeat center center;
     height: 50px;
-    border-bottom: 1px solid white;    
+    width: 100%;
+    border-bottom: 1px solid white;   
+}
+
+.game-of-blade ion-img{
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 ion-img {
