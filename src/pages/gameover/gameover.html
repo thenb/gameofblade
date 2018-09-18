@@ -1,13 +1,15 @@
 <ion-content padding class="backgroundImageGameOver">  
   <ion-grid>
     <ion-row class="logo-gameover">
+        <ion-img width="100%" height="120" background="transparent !important" src="../../assets/logo/logo-big-bltv@2x.png"></ion-img>
     </ion-row> 
     <ion-row>
       <ion-label text-center class="winner-label bangers">{{msg_victory}} Wins</ion-label> 
     </ion-row>  
     <ion-row class="trofeu-winner padding-40">
+        <img src="../../assets/icons/trophy.png" class="con-playr-top">  
     </ion-row>          
-    <ion-row class="padding-botton">  
+    <ion-row class="buttons">  
       <button ion-button full  (click)="share()" class="share-gameover"></button>        
       <button ion-button full (click)="newGame()" class="go-home"></button>
     </ion-row>       
