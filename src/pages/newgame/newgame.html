@@ -45,9 +45,6 @@
               <ion-input type="text" placeholder="Player 4" [(ngModel)]="player_4_name" class="text-input"></ion-input>
           </ion-col>        
       </ion-row>
-      <ion-row>            
-        <ion-col col-6 offset-6 class="next" *ngIf="player_1_name != '' || player_2_name != '' || player_3_name != '' || player_4_name != ''" (click)="startTrick()"> 
-        </ion-col>                
-      </ion-row> 
+      <ion-img  class="next-dif" width="120px" src="../../assets/buttons/small-startBtn@2x.png" (click)="startTrick()"></ion-img> 
     </ion-grid> 
 </ion-content>

@@ -13,10 +13,12 @@ export class LoadingPage {
   private turn: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    setTimeout(() => 
+    {
+      this.navCtrl.push(TricksPage);
+    },
+    2000);
 
-  startTrick() {    
-    this.navCtrl.push(TricksPage);
-  }
 
+  }
 }

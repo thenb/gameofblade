@@ -21,7 +21,6 @@
 }
 
 .next{
-    background: url('../../assets/buttons/small-startBtn.png') no-repeat center center;
     left: 0;
     bottom: 10px;
     right: 0;
@@ -31,24 +30,18 @@
     opacity: 1;   
 }
 
-.doted1{
-    background: url('../../assets/ui/bullet-1-blue.png') no-repeat center center;
-    height: 50px;
+.doted{
+    padding-top: 10px;
+    height: 500px;
 }
 
-.doted2{
-    background: url('../../assets/ui/bullet-2-green.png') no-repeat center center;
-    height: 50px;
+.doted ion-img{
+    display: block !important;
+    margin: auto;
 }
 
-.doted3{
-    background: url('../../assets/ui/bullet-3-yellow.png') no-repeat center center;
-    height: 50px;
-}
-
-.doted4{
-    background: url('../../assets/ui/bullet-4-pink.png') no-repeat center center;
-    height: 50px;
+.loading-row{
+    height: 100px;
 }
 
 

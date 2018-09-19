@@ -20,22 +20,31 @@
     font-weight: bold;
 }
 
-.next{
-    background: url('../../assets/buttons/small-startBtn.png') no-repeat center center;
-    left: 0;
+.next-dif{
+    position: fixed;
     bottom: 10px;
-    right: 0;
+    right: 5px;
     height: 50px;
+    border-radius: 8px;
+}
+
+.next-dif ion-img{
+    float: right !important;
+    display: block;
 }
 
 .back{
-    background: url('../../assets/buttons/backBtn.png') no-repeat center center;
     position: fixed;
-    left: 0;
+    left: 5px;
     bottom: 10px;
-    right: 10;
     height: 50px;
+    border-radius: 8px;
     opacity:1;   
+}
+
+.back ion-img{
+    float: left !important;
+    display: block;
 }
 
 .selected{
@@ -45,7 +54,6 @@
 .set-difficult-label{
     font-size: 32px;
     color: white;
-    padding-top:20px;
 }
 
 .padding-top-bottom-5{
