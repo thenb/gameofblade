@@ -96,7 +96,9 @@
       <ion-row >
           <button ion-button class="generate-tricks-button-4" *ngIf="count_tricks==3"  [disabled]="true" ></button>   
       </ion-row> 
-      <button ion-button full (click)="startTurn()" *ngIf="count_tricks!=0" class="set-trick"></button>  
+            
+      <button *ngIf="count_tricks!=0" ion-button full class="set-trick" (click)="startTurn()"></button>
+
     </ion-grid>
   </ion-content>
   
