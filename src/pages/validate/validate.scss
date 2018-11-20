@@ -103,7 +103,12 @@
     white-space: nowrap;
 }
 
-.set-trick-turns{
-    background: url('../../assets/buttons/yes no buttons/notyet-button.png') no-repeat center center;
+.set-trick-true{
+    background: url('../../assets/buttons/yes no buttons/yes-button@2x.png') no-repeat center center;
+    height: 90px;
+}
+
+.set-trick-false{
+    background: url('../../assets/buttons/yes no buttons/no-button@2x.png') no-repeat center center;
     height: 90px;
 }

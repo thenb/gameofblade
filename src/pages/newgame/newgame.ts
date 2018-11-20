@@ -78,29 +78,28 @@ export class NewGamePage {
         window.localStorage.setItem('player_4_status', undefined);
       }   
 
-      window.localStorage.setItem('turn_number', '1');  
       this.players = [];
       if(this.player_1_name != 'undefined' && this.player_1_name != '' && this.player_1_name != null){
-        this.players.push({name:this.player_1_name, status:0, icon:this.iconService.getIcon(PlayerColors.azul, 1), color: PlayerColors.azul});
+        this.players.push({name:this.player_1_name, status:1, icon:this.iconService.getIcon(PlayerColors.azul, 1), color: PlayerColors.azul});
         //window.localStorage.setItem('player_1', JSON.stringify(this.players[0]));
       }
 
       if(this.player_2_name != 'undefined' && this.player_2_name != '' && this.player_2_name != null){
-        this.players.push({name:this.player_2_name, status:0, icon:this.iconService.getIcon(PlayerColors.verde, 1), color: PlayerColors.verde});
+        this.players.push({name:this.player_2_name, status:1, icon:this.iconService.getIcon(PlayerColors.verde, 1), color: PlayerColors.verde});
         //window.localStorage.setItem('player_2', JSON.stringify(this.players[1]));
       }else{
 
       }
 
       if(this.player_3_name != 'undefined' && this.player_3_name != '' && this.player_3_name != null){
-        this.players.push({name:this.player_3_name, status:0, icon:this.iconService.getIcon(PlayerColors.amarelo, 1), color: PlayerColors.amarelo});
+        this.players.push({name:this.player_3_name, status:1, icon:this.iconService.getIcon(PlayerColors.amarelo, 1), color: PlayerColors.amarelo});
         //window.localStorage.setItem('player_3', JSON.stringify(this.players[2]));
       }else{
 
       }
 
       if(this.player_4_name != 'undefined' && this.player_4_name != '' && this.player_4_name != null){
-        this.players.push({name:this.player_4_name, status:0, icon:this.iconService.getIcon(PlayerColors.vermelho, 1), color: PlayerColors.vermelho});
+        this.players.push({name:this.player_4_name, status:1, icon:this.iconService.getIcon(PlayerColors.vermelho, 1), color: PlayerColors.vermelho});
         //window.localStorage.setItem('player_4', JSON.stringify(this.players[3]));
       }else{
 

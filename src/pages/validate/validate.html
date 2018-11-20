@@ -39,7 +39,8 @@
             </ion-row>
           </ion-col>
           <ion-col col-3>
-            <button ion-button danger full class="set-trick-turns" (click)="updateTrick(player)"></button>  
+            <ion-img width="70px" height="180px" src='../../assets/buttons/yes no buttons/yes-button@2x.png' *ngHide="player.trick == true" (click)="player.trick = !player.trick"></ion-img>
+            <ion-img width="70px" height="180px" src='../../assets/buttons/yes no buttons/no-button@2x.png' *ngHide="player.trick == false" (click)="player.trick = !player.trick"></ion-img>
           </ion-col>       
         </ion-row> 
       </ion-row>
