@@ -41,42 +41,6 @@ export class NewGamePage {
 
   startTrick() {   
     if(this.validateGame()){ 
-      if(this.player_1_name != ''){
-        window.localStorage.setItem('player_1_name', this.player_1_name); 
-        this.player_1_status = 0; 
-        window.localStorage.setItem('player_1_status', this.player_1_status);
-      } else{
-        //Deve zerar, para garantir que não ficou nenhum lixo
-        window.localStorage.setItem('player_1_name', undefined); 
-        window.localStorage.setItem('player_1_status', undefined);
-      } 
-
-      if(this.player_2_name != ''){
-        window.localStorage.setItem('player_2_name', this.player_2_name);
-        this.player_2_status = 0; 
-        window.localStorage.setItem('player_2_status', this.player_2_status);
-      }else{
-        window.localStorage.setItem('player_2_name', undefined);
-        window.localStorage.setItem('player_2_status', undefined);
-      }     
-
-      if(this.player_3_name != ''){
-        window.localStorage.setItem('player_3_name', this.player_3_name);
-        this.player_3_status = 0; 
-        window.localStorage.setItem('player_3_status', this.player_3_status);
-      }else{
-        window.localStorage.setItem('player_3_name', undefined);
-        window.localStorage.setItem('player_3_status', undefined);
-      }
-
-      if(this.player_4_name != ''){
-        window.localStorage.setItem('player_4_name', this.player_4_name);
-        this.player_4_status = 0; 
-        window.localStorage.setItem('player_4_status', this.player_4_status);
-      }else{
-        window.localStorage.setItem('player_4_name', undefined);
-        window.localStorage.setItem('player_4_status', undefined);
-      }   
 
       this.players = [];
       if(this.player_1_name != 'undefined' && this.player_1_name != '' && this.player_1_name != null){
@@ -109,6 +73,8 @@ export class NewGamePage {
       //window.localStorage.setItem('actual_player', this.actual_player);    
 
       window.localStorage.setItem('players', JSON.stringify(this.players));
+      
+      window.localStorage.setItem('turn_number', '0');
       this.navCtrl.push(DifficultPage);
     }else{
       this.presentToast(CONTENT.NewGame.erroCampoObrigatorio);

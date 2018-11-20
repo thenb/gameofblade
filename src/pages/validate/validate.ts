@@ -27,7 +27,12 @@ export class ValidatePage {
     this.turn = window.localStorage.getItem('turn_number');
     this.players = JSON.parse( window.localStorage.getItem('players'));    
     this.players.forEach(p => {     
-      p.trick = true;
+      if(p.status > 5){
+        p.trick = undefined;
+      }else{
+        p.yesNoBtn = "../../assets/buttons/yes no buttons/yes-button@2x.png";
+        p.trick = true;
+      }
     });
      
   }
@@ -45,7 +50,7 @@ export class ValidatePage {
 
     this.players.forEach(p => {     
       //Se status menor que 5, jogador ainda está no jogo 
-      if(p.trick == false){
+      if(p.trick === false){
         p.status++;  
         p.icon = this.iconService.getIcon(p.color, p.status);
       }
@@ -56,7 +61,7 @@ export class ValidatePage {
     let msg_victory = "";
     this.players.forEach(p => {     
       //Se status menor que 5, jogador ainda está no jogo 
-      if(p.status < 5){
+      if(p.status < 6){
         player++;        
         msg_victory = msg_victory.concat( ' '+p.name+' '); 
       }
@@ -79,10 +84,11 @@ export class ValidatePage {
   } 
 
   updateTrick(player: any){
-    if(player.trick == undefined){
-      player.trick = true;
+    player.trick = !player.trick;
+    if(player.trick === true){
+      player.yesNoBtn = "../../assets/buttons/yes no buttons/yes-button@2x.png";
     }else{
-      player.trick = !player.trick;
+      player.yesNoBtn = "../../assets/buttons/yes no buttons/no-button@2x.png";
     }
   }
   
