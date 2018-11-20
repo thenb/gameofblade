@@ -6,6 +6,8 @@ import { isNullOrUndefined } from 'util';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { AlertController } from 'ionic-angular';
 import { AnalyticsDirective } from '../../directives/analytics/analytics';
+import { ToastController } from 'ionic-angular';
+import { CONTENT } from '../../assets/content/content';
 
 @Component({
   selector: 'page-home',
@@ -18,7 +20,7 @@ export class HomePage {
   private backController : boolean;
 
   
-  constructor(public navCtrl: NavController, private socialSharing: SocialSharing, platform: Platform, private alertCtrl: AlertController, private ga: AnalyticsDirective) {
+  constructor(public navCtrl: NavController, private socialSharing: SocialSharing, platform: Platform, private alertCtrl: AlertController, private ga: AnalyticsDirective, public toastCtrl: ToastController) {
     this.backController = true;
 
     //if theres something on turn number
@@ -83,6 +85,26 @@ export class HomePage {
 
   share() {
     this.socialSharing.share("Text to be shared \nExternal urls:", "Subject", "https://static.findie.me/bladelife/logos/bladelife-logo.png", "https://bladelife.tv/ \nhttps://bladelife.tv/");
+  }
+
+  commingSoon(){
+    this.presentToast(CONTENT.NewGame.commingSoon);
+  }
+
+  presentToast(data) {
+    
+    let toast = this.toastCtrl.create({
+      message: JSON.stringify(data),
+      duration: 3000,
+      position: 'top',
+      cssClass: 'toastCenter'
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+  
+    toast.present();
   }
 
 }

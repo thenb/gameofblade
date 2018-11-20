@@ -1,10 +1,37 @@
 <ion-content padding class="backgroundImage">  
   <ion-grid>
     <ion-row width="100%" class="logo-row" align-items-center>
-        <ion-img width="100%" height="120" background="transparent !important" src="../../assets/logo/logo-big-bltv@2x.png"></ion-img>
+        <ion-img width="100%" height="100" background="transparent !important" src="../../assets/logo/logo-big-bltv@2x.png"></ion-img>
     </ion-row>          
     <ion-row class="padding-botton">  
       <button ion-button full (click)="startGame()" class="startgame"></button>
-    </ion-row>       
+      <button ion-button full class="praticegame" (click)="commingSoon()"></button>
+    </ion-row> 
+    <ion-row text-center class="padding-top-80">             
+      <ion-col col-4 >  
+        <ion-row>
+          <ion-img  (click)="commingSoon()" class="avatar-home" src="../../assets/buttons/homescreen buttons/how-to-button@2x.png"></ion-img>
+        </ion-row>  
+        <ion-row text-center>
+          <ion-label class="avatar-home-label bangers">How to</ion-label> 
+        </ion-row>    
+      </ion-col>   
+      <ion-col col-4 >  
+        <ion-row>
+          <ion-img (click)="commingSoon()" class="avatar-home" src="../../assets/buttons/homescreen buttons/trick-list-button@2x.png"></ion-img>
+        </ion-row>  
+        <ion-row text-center>
+          <ion-label class="avatar-home-label bangers">Tricks</ion-label> 
+        </ion-row>     
+      </ion-col> 
+      <ion-col col-4 >    
+        <ion-row >
+          <ion-img (click)="share()"  class="avatar-home" src="../../assets/buttons/homescreen buttons/share-button@2x.png"></ion-img>
+        </ion-row>  
+        <ion-row text-center>
+            <ion-label class="avatar-home-label bangers">Share</ion-label>
+        </ion-row>    
+      </ion-col>       
+  </ion-row>      
   </ion-grid>
 </ion-content>
