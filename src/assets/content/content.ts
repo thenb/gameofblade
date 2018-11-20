@@ -1,6 +1,7 @@
 export let CONTENT = { //PLEASE UPDATE THE FOLLOWING VALUES WITH YOURS ONES
     NewGame:{
-        erroCampoObrigatorio: "At least 2 players"
+        erroCampoObrigatorio: "At least 2 players",
+        commingSoon: "Coming Soon"
     },
 
     easy_tricks : [
