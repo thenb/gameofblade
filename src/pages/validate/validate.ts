@@ -27,7 +27,7 @@ export class ValidatePage {
     this.turn = window.localStorage.getItem('turn_number');
     this.players = JSON.parse( window.localStorage.getItem('players'));    
     this.players.forEach(p => {     
-      p.trick = undefined;
+      p.trick = true;
     });
      
   }
@@ -45,7 +45,7 @@ export class ValidatePage {
 
     this.players.forEach(p => {     
       //Se status menor que 5, jogador ainda está no jogo 
-      if(p.trick == true){
+      if(p.trick == false){
         p.status++;  
         p.icon = this.iconService.getIcon(p.color, p.status);
       }
