@@ -15,37 +15,19 @@ export class ValidatePage {
   private player_turn_index : number;
   private callback : any;
   private turn : any;
-  private player_1_name : any;
-  private player_2_name : any;
-  private player_3_name : any;
-  private player_4_name : any;
-  private player_1_status : any;
-  private player_2_status : any;
-  private player_3_status : any;
-  private player_4_status : any;
   private player_status: any;
   private players: any;
   private players_count: any;
-  private actual_player: any;
-  private player_turn : any;
   private returning: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {    
    
     this.trick = window.localStorage.getItem('trick');
-    this.player_1_name = window.localStorage.getItem('player_1_name');    
-    this.player_1_status = window.localStorage.getItem('player_1_status');
-    this.player_2_name = window.localStorage.getItem('player_2_name');
-    this.player_2_status = window.localStorage.getItem('player_2_status');
-    this.player_3_name = window.localStorage.getItem('player_3_name');
-    this.player_3_status = window.localStorage.getItem('player_3_status');
-    this.player_4_name = window.localStorage.getItem('player_4_name');
-    this.player_4_status = window.localStorage.getItem('player_4_status');
     this.turn = window.localStorage.getItem('turn_number');
     this.players = JSON.parse( window.localStorage.getItem('players'));    
-    this.actual_player = window.localStorage.getItem('actual_player'); 
-    this.players_count = this.players.length;
-    this.player_turn = this.players[this.actual_player];   
+    this.players.forEach(p => {     
+      p.trick = undefined;
+    });
      
   }
 
@@ -57,30 +39,17 @@ export class ValidatePage {
     }  
   }  
 
- gotTrick() {  
-  this.navCtrl.push(GotitPage,
-    {         
-        callback: this.getData,
-        player: this.player_turn
-    });
- }
-
- getData = data =>
-  {
-    return new Promise((resolve, reject) => {
-      this.nextPlayer();
-    }).catch(err => {
-      throw new Error(err);
-    });
-  };
-
-  nextPlayer() {    
-      //Validate Pontis
-    //do points  
-    
-  }
 
   checkWinner() {
+
+    this.players.forEach(p => {     
+      //Se status menor que 5, jogador ainda está no jogo 
+      if(p.trick == true){
+        p.status++;  
+      }
+    });
+
+
     let player = 0;
     let msg_victory = "";
     this.players.forEach(p => {     
@@ -96,6 +65,8 @@ export class ValidatePage {
       msg_victory= 'Nobody';        
     }
     
+    window.localStorage.setItem('players', JSON.stringify(this.players));
+
     // Se foi maior que 1, ainda tem mais rodadas, caso seja 1, tem um vencedor
     if(player > 1){       
       return false;
@@ -105,20 +76,12 @@ export class ValidatePage {
     }
   } 
 
-  //Pega o primeiro 
-  getFirstPlayer(){
-    let validateNextPlayer = false;
-    let count = 0;
-    this.players.forEach(p => {     
-      if(p.status >= 5 && !validateNextPlayer){
-        count++;      
-      }else{
-        validateNextPlayer = true;
-      }
-    }); 
-    this.actual_player = count;
-    
+  updateTrick(player: any){
+    if(player.trick == undefined){
+      player.trick = true;
+    }else{
+      player.trick = !player.trick;
+    }
   }
-
   
 }
