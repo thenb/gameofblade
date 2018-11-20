@@ -11,25 +11,25 @@
           </ion-col>       
       </ion-row>
       <ion-row  no-margin *ngFor="let player of players">        
-        <ion-row class="turn-information"> 
-          <ion-col col-2 offset-2 class="doted">
-            <ion-img width="50px" height="180px" src='{{player.icon}}'></ion-img>
-          </ion-col>   
-          
-          <ion-col class="turn-information-name">
+        <ion-row class="turn-trick-capsule"> 
+          <ion-col col-3 class="doted">
+            <ion-img width="70px" height="180px" src='{{player.icon}}'></ion-img>
+          </ion-col>
+          <ion-col col-6>
             <ion-row>
-              <ion-label center class="turn-trick-capsule bangers" >{{ player.name }}   </ion-label> 
+              <ion-label class="bangers" >{{ player.name }}   </ion-label> 
             </ion-row>
-            <ion-row center full *ngIf="player_turn.status == 0" class="status-0"></ion-row>
-            <ion-row center full *ngIf="player_turn.status == 1" class="status-1"></ion-row>
-            <ion-row center full *ngIf="player_turn.status == 2" class="status-2"></ion-row>
-            <ion-row center full *ngIf="player_turn.status == 3" class="status-3"></ion-row>
-            <ion-row center full *ngIf="player_turn.status == 4" class="status-4"></ion-row>
-            <ion-row center full *ngIf="player_turn.status == 5" class="status-5"></ion-row>
+            <ion-row center full *ngIf="player.status == 1" class="status-0"></ion-row>
+            <ion-row center full *ngIf="player.status == 2" class="status-1"></ion-row>
+            <ion-row center full *ngIf="player.status == 3" class="status-2"></ion-row>
+            <ion-row center full *ngIf="player.status == 4" class="status-3"></ion-row>
+            <ion-row center full *ngIf="player.status == 5" class="status-4"></ion-row>
+            <ion-row center full *ngIf="player.status == 6" class="status-5"></ion-row>
+          </ion-col>
+          <ion-col col-3>
+            <button ion-button danger full class="set-trick-turns" ></button>  
           </ion-col>       
-      </ion-row>  
-
-
+        </ion-row> 
       </ion-row>
       <ion-row class="padding-botton">           
         <ion-col col-12>

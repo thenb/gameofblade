@@ -10,32 +10,32 @@
 
 .status-0{
     background: url('../../assets/ui/small-blade-0.png') no-repeat center center;
-    height: 70px;
+    height: 20px;
 }
 
 .status-1{
     background: url('../../assets/ui/small-blade-1.png') no-repeat center center;
-    height: 70px;
+    height: 20px;
 }
 
 .status-2{
     background: url('../../assets/ui/small-blade-2.png') no-repeat center center;
-    height: 70px;
+    height: 20px;
 }
 
 .status-3{
     background: url('../../assets/ui/small-blade-3.png') no-repeat center center;
-    height: 70px;
+    height: 20px;
 }
 
 .status-4{
     background: url('../../assets/ui/small-blade-4.png') no-repeat center center;
-    height: 70px;
+    height: 20px;
 }
 
 .status-5{
     background: url('../../assets/ui/small-blade-5.png') no-repeat center center;
-    height: 70px;
+    height: 20px;
 }
 
 .next-round{
@@ -50,7 +50,7 @@
 
 
 .turn-trick-capsule{
-    height: 80px;
+    height: 100px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -61,6 +61,7 @@
     font-family: Bangers;
     color: white;
     text-align: center;
+    margin-bottom: 5px;
    
 }
 
@@ -81,13 +82,7 @@
     white-space: normal !important;   
 }
 
-.turn-information{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    height: 30vh;
-}
+
 
 .turn-information-name{
     padding-top: 3vh;
@@ -105,4 +100,9 @@
     padding-left: 3vh;
     text-overflow: ellipsis; 
     white-space: nowrap;
+}
+
+.set-trick-turns{
+    background: url('../../assets/buttons/yes no buttons/notyet-button.png') no-repeat center center;
+    height: 90px;
 }
