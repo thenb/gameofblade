@@ -27,6 +27,7 @@ export class TricksPage {
   private count_tricks : number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private ga: AnalyticsDirective) {    
+    this.turn = 0;
     this.trick = '';
     this.count_tricks = 0;   
     this.level = window.localStorage.getItem('level');  
@@ -52,6 +53,8 @@ export class TricksPage {
   startTurn() {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario 
+    this.turn++;
+    window.localStorage.setItem('turn_number', this.turn);
     window.localStorage.setItem('trick', this.trick);   
     this.navCtrl.push(ValidatePage);
     this.count_tricks = 0;
