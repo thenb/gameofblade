@@ -5,6 +5,7 @@ import { GotitPage } from '../gotit/gotit';
 import { GameoverPage } from '../gameover/gameover';
 import { TurnsPage } from '../turns/turns';
 import { TricksPage } from '../tricks/tricks';
+import { IconServiceDirective } from '../../directives/icon-service/icon-service';
 
 @Component({
   selector: 'page-validate',
@@ -20,7 +21,7 @@ export class ValidatePage {
   private players_count: any;
   private returning: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {    
+  constructor(public navCtrl: NavController, public navParams: NavParams,private iconService: IconServiceDirective) {    
    
     this.trick = window.localStorage.getItem('trick');
     this.turn = window.localStorage.getItem('turn_number');
@@ -46,6 +47,7 @@ export class ValidatePage {
       //Se status menor que 5, jogador ainda está no jogo 
       if(p.trick == true){
         p.status++;  
+        p.icon = this.iconService.getIcon(p.color, p.status);
       }
     });
 
