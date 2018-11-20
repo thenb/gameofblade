@@ -65,6 +65,8 @@ export class ValidatePage {
       msg_victory= 'Nobody';        
     }
     
+    window.localStorage.setItem('players', JSON.stringify(this.players));
+
     // Se foi maior que 1, ainda tem mais rodadas, caso seja 1, tem um vencedor
     if(player > 1){       
       return false;
