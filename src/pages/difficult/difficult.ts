@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { LoadingPage } from '../loading-game/loading-game';
+import { TricksPage } from '../tricks/tricks';
 import { ToastController } from 'ionic-angular';
 import { CONTENT } from '../../assets/content/content';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
@@ -22,7 +23,7 @@ export class DifficultPage {
   }
 
   startTrick() {    
-    this.navCtrl.push(LoadingPage);
+    this.navCtrl.push(TricksPage);
   }
 
   back() {

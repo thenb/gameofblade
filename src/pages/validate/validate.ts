@@ -49,33 +49,12 @@ export class ValidatePage {
      
   }
 
-  failTrick() {
-    this.players[this.actual_player].status++;
-    if(this.players[this.actual_player].number==0){
-      this.player_1_status = this.players[this.actual_player].status;
-      window.localStorage.setItem('player_1_status', this.player_1_status);
-    }
-    if(this.players[this.actual_player].number==1){
-      this.player_2_status = this.players[this.actual_player].status;
-      window.localStorage.setItem('player_2_status', this.player_2_status);
-    }
-    if(this.players[this.actual_player].number==2){
-      this.player_3_status = this.players[this.actual_player].status;
-      window.localStorage.setItem('player_3_status', this.player_3_status);
-    }
-    if(this.players[this.actual_player].number==3){
-      this.player_4_status = this.players[this.actual_player].status;
-      window.localStorage.setItem('player_4_status', this.player_4_status);
-
-    } 
-
-    window.localStorage.setItem('players', JSON.stringify(this.players));  
-
-    this.navCtrl.push(FailPage,
-      {         
-          callback: this.getData,
-          player: this.player_turn
-      });
+  nextRound() {
+    if(this.checkWinner()){
+      this.navCtrl.push(GameoverPage)
+    }else{        
+      this.navCtrl.push(TricksPage)
+    }  
   }  
 
  gotTrick() {  
@@ -95,57 +74,10 @@ export class ValidatePage {
     });
   };
 
-  nextPlayer() {
-    this.actual_player++;
-    window.localStorage.setItem('actual_player', this.actual_player);
-    //se acabou o ultimo jogador do turno
-    if(this.actual_player <= this.players_count && this.players[this.actual_player] != undefined  && this.players[this.actual_player] != null){
-      //Verifica se próximo player ainda está jogando e seleciona o próximo jogador apto a jogar
-      if(this.players[this.actual_player].status >= 5){
-        this.actual_player++;
-        alert("primeiro add: " + this.actual_player );
-        while(this.actual_player <= this.players_count && this.players[this.actual_player] != undefined  && this.players[this.actual_player] != null && this.players[this.actual_player].status >= 5){
-          this.actual_player++;
-        }
-        window.localStorage.setItem('actual_player', this.actual_player);
-
-        alert("depois while: " + this.actual_player );
-        if(this.actual_player > this.players_count){
-          if(this.checkWinner()){
-            this.navCtrl.push(GameoverPage)
-          }else{
-            this.getFirstPlayer();
+  nextPlayer() {    
+      //Validate Pontis
+    //do points  
     
-            this.turn++;
-            window.localStorage.setItem('turn_number', this.turn);
-            window.localStorage.setItem('actual_player', this.actual_player);
-            this.navCtrl.push(TricksPage)
-          }
-        }else{
-          alert("chama turn: " + this.players[this.actual_player].name );
-          //enquato nao acaba o turno
-          this.player_turn = this.players[this.actual_player];
-          this.navCtrl.push(TurnsPage) 
-        }
-
-      }else{
-        //enquato nao acaba o turno
-        this.player_turn = this.players[this.actual_player];
-        this.navCtrl.push(TurnsPage) 
-      }
-
-    }else{
-      if(this.checkWinner()){
-        this.navCtrl.push(GameoverPage)
-      }else{
-        this.getFirstPlayer();
-
-        this.turn++;
-        window.localStorage.setItem('turn_number', this.turn);
-        window.localStorage.setItem('actual_player', this.actual_player);
-        this.navCtrl.push(TricksPage)
-      }
-    }
   }
 
   checkWinner() {
