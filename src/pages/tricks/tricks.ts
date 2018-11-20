@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TurnsPage } from '../turns/turns';
+import { ValidatePage } from '../validate/validate';
 import { CONTENT } from '../../assets/content/content';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { AnalyticsDirective } from '../../directives/analytics/analytics';
@@ -52,7 +53,7 @@ export class TricksPage {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario 
     window.localStorage.setItem('trick', this.trick);   
-    this.navCtrl.push(TurnsPage);
+    this.navCtrl.push(ValidatePage);
     this.count_tricks = 0;
     this.ga.call('StartTurn');
   }
