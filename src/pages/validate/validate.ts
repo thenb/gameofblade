@@ -45,7 +45,7 @@ export class ValidatePage {
 
     this.players.forEach(p => {     
       //Se status menor que 5, jogador ainda está no jogo 
-      if(p.trick == true){
+      if(p.trick == false){
         p.status++;  
         p.icon = this.iconService.getIcon(p.color, p.status);
       }
