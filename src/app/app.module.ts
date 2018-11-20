@@ -19,6 +19,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { AnalyticsDirective } from '../directives/analytics/analytics';
+import { IconServiceDirective } from '../directives/icon-service/icon-service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AnalyticsDirective } from '../directives/analytics/analytics';
     DifficultPage,
     LoadingPage,
     ValidatePage,
-    AnalyticsDirective
+    AnalyticsDirective,
+    IconServiceDirective
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ import { AnalyticsDirective } from '../directives/analytics/analytics';
     SocialSharing,
     GoogleAnalytics,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AnalyticsDirective
+    AnalyticsDirective,
+    IconServiceDirective
   ]
 })
 export class AppModule {}
