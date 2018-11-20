@@ -27,7 +27,7 @@ export class ValidatePage {
     this.turn = window.localStorage.getItem('turn_number');
     this.players = JSON.parse( window.localStorage.getItem('players'));    
     this.players.forEach(p => {     
-      p.trick = undefined;
+      p.trick = true;
     });
      
   }
