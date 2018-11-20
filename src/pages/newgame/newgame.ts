@@ -81,19 +81,19 @@ export class NewGamePage {
       window.localStorage.setItem('turn_number', '1');  
       this.players = [];
       if(this.player_1_name != 'undefined' && this.player_1_name != '' && this.player_1_name != null){
-        this.players.push({name:this.player_1_name, status:0, icon:this.iconService.getIcon(PlayerColors.amarelo, 1)});
+        this.players.push({name:this.player_1_name, status:0, icon:this.iconService.getIcon(PlayerColors.azul, 1)});
         //window.localStorage.setItem('player_1', JSON.stringify(this.players[0]));
       }
 
       if(this.player_2_name != 'undefined' && this.player_2_name != '' && this.player_2_name != null){
-        this.players.push({name:this.player_2_name, status:0, icon:this.iconService.getIcon(PlayerColors.azul, 1)});
+        this.players.push({name:this.player_2_name, status:0, icon:this.iconService.getIcon(PlayerColors.verde, 1)});
         //window.localStorage.setItem('player_2', JSON.stringify(this.players[1]));
       }else{
 
       }
 
       if(this.player_3_name != 'undefined' && this.player_3_name != '' && this.player_3_name != null){
-        this.players.push({name:this.player_3_name, status:0, icon:this.iconService.getIcon(PlayerColors.verde, 1)});
+        this.players.push({name:this.player_3_name, status:0, icon:this.iconService.getIcon(PlayerColors.amarelo, 1)});
         //window.localStorage.setItem('player_3', JSON.stringify(this.players[2]));
       }else{
 

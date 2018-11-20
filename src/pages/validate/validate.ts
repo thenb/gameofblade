@@ -74,5 +74,12 @@ export class ValidatePage {
     }
   } 
 
+  updateTrick(player: any){
+    if(player.trick == undefined){
+      player.trick = true;
+    }else{
+      player.trick = !player.trick;
+    }
+  }
   
 }
