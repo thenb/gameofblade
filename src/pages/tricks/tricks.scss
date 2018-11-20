@@ -8,9 +8,8 @@
 .generate-tricks-button-1{
     background: url('../../assets/buttons/generate btn.png') no-repeat center center , url('../../assets/buttons/generateBtn-border-1.png') no-repeat center center ;
     height: 270px;
-    position: fixed;
+    top: 50px;
     width: 92%;
-    bottom: 65px;
     left: 16px;
     right: 16px;
 }
@@ -18,9 +17,8 @@
 .generate-tricks-button-2{
     background: url('../../assets/buttons/generate btn.png') no-repeat center center , url('../../assets/buttons/generateBtn-border-2.png') no-repeat center center ;
     height: 270px;
-    position: fixed;
     width: 92%;
-    bottom: 65px;
+    top: 50px;
     left: 16px;
     right: 16px;
 }
@@ -28,9 +26,8 @@
 .generate-tricks-button-3{
     background: url('../../assets/buttons/generate btn.png') no-repeat center center , url('../../assets/buttons/generateBtn-border-3.png') no-repeat center center ;
     height: 270px;
-    position: fixed;
     width: 92%;
-    bottom: 65px;
+    top: 50px;
     left: 16px;
     right: 16px;
 }
@@ -38,9 +35,8 @@
 .generate-tricks-button-4{
     background: url('../../assets/buttons/generateBtn-disabled.png') no-repeat center center , url('../../assets/buttons/generateBtn-border-0.png') no-repeat center center ;
     height: 270px;
-    position: fixed;
     width: 92%;
-    bottom: 65px;
+    top: 50px;
     left: 16px;
     right: 16px;
 }

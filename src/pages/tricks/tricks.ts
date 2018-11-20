@@ -15,14 +15,6 @@ export class TricksPage {
   private trick : string;
   private trick_list : any;
   private level : any;
-  private player_1_name : any;
-  private player_2_name : any;
-  private player_3_name : any;
-  private player_4_name : any;
-  private player_1_status : any;
-  private player_2_status : any;
-  private player_3_status : any;
-  private player_4_status : any;
   private turn : any;
   private count_tricks : number;
 
@@ -38,14 +30,6 @@ export class TricksPage {
     }else if(this.level == 'difficult'){
       this.trick_list = Object.assign([], CONTENT.hard_tricks);
     }
-    this.player_1_name = window.localStorage.getItem('player_1_name');    
-    this.player_1_status = window.localStorage.getItem('player_1_status');
-    this.player_2_name = window.localStorage.getItem('player_2_name');
-    this.player_2_status = window.localStorage.getItem('player_2_status');
-    this.player_3_name = window.localStorage.getItem('player_3_name');
-    this.player_3_status = window.localStorage.getItem('player_3_status');
-    this.player_4_name = window.localStorage.getItem('player_4_name');
-    this.player_4_status = window.localStorage.getItem('player_4_status');
     this.turn = window.localStorage.getItem('turn_number');  
     this.ga.call('Trick');
   }
