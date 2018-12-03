@@ -1,12 +1,12 @@
 <ion-content padding class="backgroundImage">  
     <ion-grid>
-      <ion-row text-center *ngIf="count_tricks==0">  
+      <ion-row text-center *ngIf="count_tricks==0" class="contairner-trick-1">  
         <ion-label class="instructions-below-label bangers">Set a trick (you can change it 2 times)</ion-label>
       </ion-row>        
-      <ion-row text-center *ngIf="count_tricks==0" class="padding-20">  
+      <ion-row text-center *ngIf="count_tricks==0" class="padding-20 contairner-trick-1">  
         <ion-label class="tab-below-label-tricks bangers">Tap for trick</ion-label>       
       </ion-row>  
-      <ion-row text-center *ngIf="count_tricks!=0">  
+      <ion-row text-center *ngIf="count_tricks!=0"class="container-trick">  
         <ion-label class="trick-tab-below-label bangers">{{trick}}</ion-label>       
       </ion-row>  
       <ion-row >
