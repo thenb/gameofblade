@@ -5,20 +5,20 @@
     </ion-row>          
     <ion-row class="padding-botton">  
       <button ion-button full (click)="startGame()" class="startgame"></button>
-      <button ion-button full class="praticegame" (click)="commingSoon()"></button>
+      <button ion-button full class="praticegame btn-opct" (click)="commingSoon()"></button>
     </ion-row> 
     <ion-row text-center class="padding-top-80">             
-      <ion-col col-4 >  
+      <ion-col col-4 class="btn-opct" (click)="commingSoon()">  
         <ion-row>
-          <ion-img  (click)="commingSoon()" class="avatar-home" src="../../assets/buttons/homescreen buttons/how-to-button@2x.png"></ion-img>
+          <ion-img class="avatar-home" src="../../assets/buttons/homescreen buttons/how-to-button@2x.png"></ion-img>
         </ion-row>  
         <ion-row text-center>
           <ion-label class="avatar-home-label bangers">How to</ion-label> 
         </ion-row>    
       </ion-col>   
-      <ion-col col-4 >  
+      <ion-col col-4 class="btn-opct" (click)="commingSoon()">  
         <ion-row>
-          <ion-img (click)="commingSoon()" class="avatar-home" src="../../assets/buttons/homescreen buttons/trick-list-button@2x.png"></ion-img>
+          <ion-img class="avatar-home" src="../../assets/buttons/homescreen buttons/trick-list-button@2x.png"></ion-img>
         </ion-row>  
         <ion-row text-center>
           <ion-label class="avatar-home-label bangers">Tricks</ion-label> 

@@ -267,7 +267,7 @@
 }
 
 .padding-10{
-    padding-top:10px;
+    padding-top:12px;
 }
 
 .next{
@@ -278,6 +278,25 @@
     right: 0;
     height: 50px;
     border-radius: 8px;
+}
+
+.start{
+    background: url('"../../assets/buttons/fullwidth-startBtn@2x.png') no-repeat center center;
+    background-size: 100%;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.startTrick{
+    width: 95%;
+    background: url('../../assets/buttons/fullwidth-startBtn@2x.png') no-repeat center center;
+    background-size: 100%;
+    height: 50px;
+    border-radius: 8px;
+    position: fixed;
+    left: 2.5%;
+    bottom: 10px;
+    height: 50px;
 }
 
 .text-input{
@@ -300,8 +319,15 @@
 
 .toastCenter {
     text-align:center;
+    font-family: "Bangers";
+    font: 12px;
 }
 
+.top-img{
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 60%;
+}
 
 
 

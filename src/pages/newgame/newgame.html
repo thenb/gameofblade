@@ -1,7 +1,7 @@
 <ion-content class="backgroundImage">
     <ion-grid>
       <ion-row class="game-of-blade">  
-          <ion-img width="50%" src="../../assets/logo/logo-small@3x.png"></ion-img>        
+          <ion-img width="29%" src="../../assets/logo/logo-small@3x.png" class="top-img"></ion-img>        
       </ion-row>
       <ion-row text-center>  
         <ion-label class="add-players-label bangers">WHO'S PLAYING?</ion-label>       
@@ -45,6 +45,8 @@
               <ion-input type="text" placeholder="Player 4" [(ngModel)]="player_4_name" class="text-input"></ion-input>
           </ion-col>        
       </ion-row>
-      <ion-img  class="next-dif" width="120px" src="../../assets/buttons/small-startBtn@2x.png" (click)="startTrick()"></ion-img> 
+      <ion-row class="padding-botton">
+          <button ion-button full (click)="startTrick()" class="startTrick"></button>
+      </ion-row>
     </ion-grid> 
 </ion-content>

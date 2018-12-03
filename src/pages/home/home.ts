@@ -94,7 +94,7 @@ export class HomePage {
   presentToast(data) {
     
     let toast = this.toastCtrl.create({
-      message: JSON.stringify(data),
+      message: data,
       duration: 3000,
       position: 'top',
       cssClass: 'toastCenter'
